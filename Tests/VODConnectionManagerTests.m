@@ -63,6 +63,47 @@
 #pragma mark -
 #pragma mark Instance methods
 
+#pragma mark GET:completion:
+
+- (void)test_GET_completion_with_nil_URLString
+{
+    XCTAssertThrows(
+        [self.manager GET:nil completion:^(id o, NSError *e) {}],
+        @"should raise NSInternalIncosistencyException"
+    );
+}
+
+- (void)test_GET_completion_with_nil_handler
+{
+    XCTAssertThrows(
+        [self.manager GET:@"" completion:nil],
+        @"should raise NSInternalIncosistencyException"
+    );
+}
+
+- (void)test_GET_completion
+{
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(
+        23.123456, -12.123456
+    );
+    id userLocation = [OCMockObject mockForClass:CLLocation.class];
+    [[[userLocation expect] andReturnValue:OCMOCK_VALUE(coordinate)] coordinate];
+    [[[userLocation expect] andReturnValue:OCMOCK_VALUE(coordinate)] coordinate];
+
+    id manager = [OCMockObject partialMockForObject:self.manager];
+    [[[manager expect] andReturn:userLocation] userLocation];
+    [[[manager expect] andReturn:userLocation] userLocation];
+    [[manager expect] GET:@"path/23123456/-12123456"
+               parameters:OCMOCK_ANY
+                  success:OCMOCK_ANY
+                  failure:OCMOCK_ANY];
+    
+    [manager GET:@"path/{lat}/{lon}" completion:^(id o, NSError *e) {}];
+    
+    XCTAssertNoThrow([userLocation verify], @"coordinates not called");
+    XCTAssertNoThrow([manager verify], @"should make the request");
+}
+
 #pragma mark locationManager:didUpdateLocations:
 
 - (void)test_locationManager_didUpdaLocations

@@ -31,8 +31,10 @@ NSDictionary * LoadOptions()
     CLLocationManager *_locationManager;
 }
 @property (readonly) CLLocationManager *locationManager;
-@property (nonatomic, readwrite) CLLocation *userLocation;
+@property (readwrite) CLLocation *userLocation;
 @property BOOL userLocationAvailable;
+@property (readonly) NSString *latitudeString;
+@property (readonly) NSString *longitudeString;
 
 @end
 
@@ -51,9 +53,21 @@ NSDictionary * LoadOptions()
     return _locationManager;
 }
 
-- (CLLocation *)userLocation
+- (NSString *)latitudeString
 {
-    return _userLocation.copy;
+    NSNumber *lat = @((NSInteger)(self.userLocation.coordinate.latitude
+                                   * 1000000));
+    
+    return lat.stringValue;
+}
+
+
+- (NSString *)longitudeString
+{
+    NSNumber *lon   = @((NSInteger)(self.userLocation.coordinate.longitude
+                                    * 1000000));
+    
+    return lon.stringValue;
 }
 
 #pragma mark -
@@ -81,6 +95,32 @@ NSDictionary * LoadOptions()
     }
     
     return self;
+}
+
+#pragma mark -
+#pragma mark Instance methods
+
+- (void)GET:(NSString *)URLString
+ completion:(void (^)(id, NSError *))handler
+{
+    NSParameterAssert(URLString);
+    NSParameterAssert(handler);
+    
+    URLString = [URLString stringByReplacingOccurrencesOfString:@"{lon}"
+                           withString:self.longitudeString];
+    URLString = [URLString stringByReplacingOccurrencesOfString:@"{lat}"
+                           withString:self.latitudeString];
+
+    [self GET:URLString
+   parameters:nil
+      success:^(AFHTTPRequestOperation *operation, id responseObject)
+    {
+        handler(responseObject, nil);
+    }
+      failure:^(AFHTTPRequestOperation *operation, NSError *error)
+    {
+        handler(nil, error);
+    }];
 }
 
 #pragma mark - CLLocationManagerDelegate

@@ -30,7 +30,7 @@ extern NSString * const kVODPasswordKey;
  @name Properties
  */
 
-@property (nonatomic, readonly) CLLocation *userLocation;
+@property (readonly) CLLocation *userLocation;
 
 /**
  @name Creating a Connection Manager
@@ -69,5 +69,12 @@ extern NSString * const kVODPasswordKey;
  NSInternalInconsistencyException.
  */
 + (instancetype)defaultManager;
+
+/**
+ @name Make request
+ */
+
+- (void)GET:(NSString *)URLString
+ completion:(void(^)(id, NSError *))handler;
 
 @end
