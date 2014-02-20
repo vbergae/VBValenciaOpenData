@@ -1,0 +1,5 @@
+[
+  "-project", "VBValenciaOpenData.xcodeproj",
+  "-scheme", "VBValenciaOpenData",
+  "-sdk", "iphonesimulator",
+]
