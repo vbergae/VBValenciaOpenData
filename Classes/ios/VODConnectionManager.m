@@ -26,7 +26,35 @@ NSDictionary * LoadOptions()
     return [NSDictionary dictionaryWithContentsOfFile:authorizationFilePath];
 }
 
+@interface VODConnectionManager() {
+@private
+    CLLocationManager *_locationManager;
+}
+@property (readonly) CLLocationManager *locationManager;
+@property (nonatomic, readwrite) CLLocation *userLocation;
+@property BOOL userLocationAvailable;
+
+@end
+
 @implementation VODConnectionManager
+
+#pragma mark -
+#pragma mark Properties
+
+- (CLLocationManager *)locationManager
+{
+    if (!_locationManager) {
+        _locationManager = CLLocationManager.new;
+        _locationManager.delegate = self;
+    }
+    
+    return _locationManager;
+}
+
+- (CLLocation *)userLocation
+{
+    return _userLocation.copy;
+}
 
 #pragma mark -
 #pragma mark Initialization
@@ -48,9 +76,25 @@ NSDictionary * LoadOptions()
         [self.requestSerializer
          setAuthorizationHeaderFieldWithUsername:username
          password:password];
+        
+        [self.locationManager startUpdatingLocation];
     }
     
     return self;
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray *)locations
+{
+    self.userLocation = locations[locations.count - 1];
+    if (self.userLocation)
+        self.userLocationAvailable = YES;
+    else
+        self.userLocationAvailable = NO;
+    
+    [manager stopUpdatingLocation];
 }
 
 #pragma mark -

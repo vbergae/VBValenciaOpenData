@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 VictorBerga.com. All rights reserved.
 //
 
+#import <MapKit/MapKit.h>
+
 #import "AFHTTPRequestOperationManager.h"
 
 /**
@@ -22,6 +24,13 @@ extern NSString * const kVODPasswordKey;
  VODConnectionManager
  */
 @interface VODConnectionManager : AFHTTPRequestOperationManager
+<CLLocationManagerDelegate>
+
+/**
+ @name Properties
+ */
+
+@property (nonatomic, readonly) CLLocation *userLocation;
 
 /**
  @name Creating a Connection Manager

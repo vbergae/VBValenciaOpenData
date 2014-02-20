@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
+
 #import "VODConnectionManager.h"
 
 @interface VODConnectionManagerTests : XCTestCase
@@ -56,6 +58,26 @@
         [[VODConnectionManager alloc] initWithOptions:nil],
         @"should raise NSInternalInconsistencyException exception"
     );
+}
+
+#pragma mark -
+#pragma mark Instance methods
+
+#pragma mark locationManager:didUpdateLocations:
+
+- (void)test_locationManager_didUpdaLocations
+{
+    NSArray *locations = @[CLLocation.new];
+    id manager = [OCMockObject mockForClass:CLLocationManager.class];
+    [[manager expect] stopUpdatingLocation];
+    
+    [self.manager locationManager:manager
+               didUpdateLocations:locations];
+    
+    XCTAssertNotNil(self.manager.userLocation,
+                    @"should set current user location");
+    XCTAssertNoThrow([manager verify],
+                     @"should stop user location");
 }
 
 #pragma mark -
