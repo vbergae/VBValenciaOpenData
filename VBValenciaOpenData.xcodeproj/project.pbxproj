@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EC8A221FED144B581AB48E9 /* libPods-VBValenciaOpenData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D36470F112E144B28118BFDC /* libPods-VBValenciaOpenData.a */; };
+		91A3C6B5DBC3484995E8E098 /* libPods-VBValenciaOpenDataTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C0FBCF363984FB7AA0B2B53 /* libPods-VBValenciaOpenDataTests.a */; };
 		CCA9261918B603C3002A87F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9261818B603C3002A87F7 /* Foundation.framework */; };
 		CCA9262718B603C3002A87F7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9262618B603C3002A87F7 /* XCTest.framework */; };
 		CCA9262818B603C3002A87F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9261818B603C3002A87F7 /* Foundation.framework */; };
@@ -40,6 +42,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		47D6AA546B2F4A639A7D9457 /* Pods-VBValenciaOpenDataTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBValenciaOpenDataTests.xcconfig"; path = "Pods/Pods-VBValenciaOpenDataTests.xcconfig"; sourceTree = "<group>"; };
+		7C0FBCF363984FB7AA0B2B53 /* libPods-VBValenciaOpenDataTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBValenciaOpenDataTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DEB0C64B4E64327BF5960EA /* Pods-VBValenciaOpenData.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBValenciaOpenData.xcconfig"; path = "Pods/Pods-VBValenciaOpenData.xcconfig"; sourceTree = "<group>"; };
 		CCA9261518B603C3002A87F7 /* libVBValenciaOpenData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVBValenciaOpenData.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA9261818B603C3002A87F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CCA9262518B603C3002A87F7 /* VBValenciaOpenDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VBValenciaOpenDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +60,7 @@
 		CCA9264F18B60607002A87F7 /* VODValenciaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODValenciaTests.m; path = Tests/VODValenciaTests.m; sourceTree = SOURCE_ROOT; };
 		CCA9265118B60607002A87F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Tests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		CCA9265218B60607002A87F7 /* VBValenciaOpenDataTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "VBValenciaOpenDataTests-Info.plist"; path = "Tests/VBValenciaOpenDataTests-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D36470F112E144B28118BFDC /* libPods-VBValenciaOpenData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBValenciaOpenData.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCA9261918B603C3002A87F7 /* Foundation.framework in Frameworks */,
+				4EC8A221FED144B581AB48E9 /* libPods-VBValenciaOpenData.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +81,7 @@
 				CCA9262718B603C3002A87F7 /* XCTest.framework in Frameworks */,
 				CCA9262A18B603C3002A87F7 /* UIKit.framework in Frameworks */,
 				CCA9262818B603C3002A87F7 /* Foundation.framework in Frameworks */,
+				91A3C6B5DBC3484995E8E098 /* libPods-VBValenciaOpenDataTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +95,8 @@
 				CCA9262E18B603C3002A87F7 /* VBValenciaOpenDataTests */,
 				CCA9261718B603C3002A87F7 /* Frameworks */,
 				CCA9261618B603C3002A87F7 /* Products */,
+				7DEB0C64B4E64327BF5960EA /* Pods-VBValenciaOpenData.xcconfig */,
+				47D6AA546B2F4A639A7D9457 /* Pods-VBValenciaOpenDataTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +115,8 @@
 				CCA9261818B603C3002A87F7 /* Foundation.framework */,
 				CCA9262618B603C3002A87F7 /* XCTest.framework */,
 				CCA9262918B603C3002A87F7 /* UIKit.framework */,
+				D36470F112E144B28118BFDC /* libPods-VBValenciaOpenData.a */,
+				7C0FBCF363984FB7AA0B2B53 /* libPods-VBValenciaOpenDataTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,9 +168,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCA9263818B603C3002A87F7 /* Build configuration list for PBXNativeTarget "VBValenciaOpenData" */;
 			buildPhases = (
+				5CDB5BAE3B704C88A9283EED /* Check Pods Manifest.lock */,
 				CCA9261118B603C3002A87F7 /* Sources */,
 				CCA9261218B603C3002A87F7 /* Frameworks */,
 				CCA9261318B603C3002A87F7 /* CopyFiles */,
+				2A19664AB84A49FB908AA1FC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,9 +187,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCA9263B18B603C3002A87F7 /* Build configuration list for PBXNativeTarget "VBValenciaOpenDataTests" */;
 			buildPhases = (
+				576B942B878F41818FD8ACBC /* Check Pods Manifest.lock */,
 				CCA9262118B603C3002A87F7 /* Sources */,
 				CCA9262218B603C3002A87F7 /* Frameworks */,
 				CCA9262318B603C3002A87F7 /* Resources */,
+				989A0788C6FA4DDE8590FD70 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -225,6 +241,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A19664AB84A49FB908AA1FC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-VBValenciaOpenData-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		576B942B878F41818FD8ACBC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5CDB5BAE3B704C88A9283EED /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		989A0788C6FA4DDE8590FD70 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-VBValenciaOpenDataTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CCA9261118B603C3002A87F7 /* Sources */ = {
@@ -337,11 +416,12 @@
 		};
 		CCA9263918B603C3002A87F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DEB0C64B4E64327BF5960EA /* Pods-VBValenciaOpenData.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/VBValenciaOpenData.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Resources/VBValenciaOpenData-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inhertited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -349,11 +429,12 @@
 		};
 		CCA9263A18B603C3002A87F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DEB0C64B4E64327BF5960EA /* Pods-VBValenciaOpenData.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/VBValenciaOpenData.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Resources/VBValenciaOpenData-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inhertited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -361,6 +442,7 @@
 		};
 		CCA9263C18B603C3002A87F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47D6AA546B2F4A639A7D9457 /* Pods-VBValenciaOpenDataTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -382,6 +464,7 @@
 		};
 		CCA9263D18B603C3002A87F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47D6AA546B2F4A639A7D9457 /* Pods-VBValenciaOpenDataTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (

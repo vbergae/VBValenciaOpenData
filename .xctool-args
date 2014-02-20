@@ -1,5 +1,5 @@
 [
-  "-project", "VBValenciaOpenData.xcodeproj",
+  "-workspace", "VBValenciaOpenData.xcworkspace",
   "-scheme", "VBValenciaOpenData",
   "-sdk", "iphonesimulator",
 ]
