@@ -1,13 +1,7 @@
-#
-# Be sure to run `pod spec lint NAME.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# To learn more about the attributes see http://guides.cocoapods.org/syntax/podspec.html
-#
 Pod::Spec.new do |s|
   s.name             = "VBValenciaOpenData"
   s.version          = "0.1.0"
-  s.summary          = "A short description of VBValenciaOpenData."
+  s.summary          = "Valencia Open data's objective-c client"
   s.description      = <<-DESC
                        An optional longer description of VBValenciaOpenData
 
