@@ -18,7 +18,7 @@ it simply add the following line to your Podfile:
 
 ## Author
 
-Víctor Berga, victor.berga@glass.u-tad.com
+Víctor Berga, vbergae@gmail.com
 
 ## License
 
