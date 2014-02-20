@@ -1,5 +1,6 @@
 # VBValenciaOpenData
 
+[![Build Status](https://travis-ci.org/vbergae/VBValenciaOpenData.png?branch=master)](https://travis-ci.org/vbergae/VBValenciaOpenData)
 [![Version](http://cocoapod-badges.herokuapp.com/v/VBValenciaOpenData/badge.png)](http://cocoadocs.org/docsets/VBValenciaOpenData)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/VBValenciaOpenData/badge.png)](http://cocoadocs.org/docsets/VBValenciaOpenData)
 
