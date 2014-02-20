@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface VODValencia : NSObject
+#ifndef _VODVALENCIA_
+    #define _VODVALENCIA_
 
-@end
+    #import "VODAround.h"
+
+#endif /* _VODVALENCIA_ */
+

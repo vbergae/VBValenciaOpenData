@@ -14,9 +14,11 @@
 		CCA9262818B603C3002A87F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9261818B603C3002A87F7 /* Foundation.framework */; };
 		CCA9262A18B603C3002A87F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9262918B603C3002A87F7 /* UIKit.framework */; };
 		CCA9262D18B603C3002A87F7 /* libVBValenciaOpenData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9261518B603C3002A87F7 /* libVBValenciaOpenData.a */; };
-		CCA9264918B605E6002A87F7 /* VODValencia.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA9264818B605E6002A87F7 /* VODValencia.m */; };
-		CCA9265318B60607002A87F7 /* VODValenciaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA9264F18B60607002A87F7 /* VODValenciaTests.m */; };
 		CCA9265418B60607002A87F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCA9265018B60607002A87F7 /* InfoPlist.strings */; };
+		CCA9265818B64EEF002A87F7 /* VODConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA9265718B64EEF002A87F7 /* VODConnectionManager.m */; };
+		CCA9266018B65807002A87F7 /* VODValencia.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CCA9264718B605E6002A87F7 /* VODValencia.h */; };
+		CCA9266518B66614002A87F7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9266418B66614002A87F7 /* MapKit.framework */; };
+		CCBE24A618B6828800F6875D /* VODConnectionManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE24A518B6828800F6875D /* VODConnectionManagerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				CCA9266018B65807002A87F7 /* VODValencia.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,15 +54,17 @@
 		CCA9262618B603C3002A87F7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CCA9262918B603C3002A87F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		CCA9264718B605E6002A87F7 /* VODValencia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VODValencia.h; path = Classes/ios/VODValencia.h; sourceTree = SOURCE_ROOT; };
-		CCA9264818B605E6002A87F7 /* VODValencia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODValencia.m; path = Classes/ios/VODValencia.m; sourceTree = SOURCE_ROOT; };
 		CCA9264A18B605F4002A87F7 /* VBValenciaOpenData-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "VBValenciaOpenData-Prefix.pch"; path = "Resources/VBValenciaOpenData-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		CCA9264B18B605F4002A87F7 /* VBValenciaOpenData.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VBValenciaOpenData.podspec; sourceTree = SOURCE_ROOT; };
 		CCA9264C18B605F4002A87F7 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		CCA9264D18B605F4002A87F7 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = SOURCE_ROOT; };
 		CCA9264E18B605F4002A87F7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
-		CCA9264F18B60607002A87F7 /* VODValenciaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODValenciaTests.m; path = Tests/VODValenciaTests.m; sourceTree = SOURCE_ROOT; };
 		CCA9265118B60607002A87F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Tests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		CCA9265218B60607002A87F7 /* VBValenciaOpenDataTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "VBValenciaOpenDataTests-Info.plist"; path = "Tests/VBValenciaOpenDataTests-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CCA9265618B64EEF002A87F7 /* VODConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VODConnectionManager.h; path = Classes/ios/VODConnectionManager.h; sourceTree = SOURCE_ROOT; };
+		CCA9265718B64EEF002A87F7 /* VODConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODConnectionManager.m; path = Classes/ios/VODConnectionManager.m; sourceTree = SOURCE_ROOT; };
+		CCA9266418B66614002A87F7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CCBE24A518B6828800F6875D /* VODConnectionManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODConnectionManagerTests.m; path = Tests/VODConnectionManagerTests.m; sourceTree = SOURCE_ROOT; };
 		D36470F112E144B28118BFDC /* libPods-VBValenciaOpenData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBValenciaOpenData.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -68,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCA9266518B66614002A87F7 /* MapKit.framework in Frameworks */,
 				CCA9261918B603C3002A87F7 /* Foundation.framework in Frameworks */,
 				4EC8A221FED144B581AB48E9 /* libPods-VBValenciaOpenData.a in Frameworks */,
 			);
@@ -112,6 +118,7 @@
 		CCA9261718B603C3002A87F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CCA9266418B66614002A87F7 /* MapKit.framework */,
 				CCA9261818B603C3002A87F7 /* Foundation.framework */,
 				CCA9262618B603C3002A87F7 /* XCTest.framework */,
 				CCA9262918B603C3002A87F7 /* UIKit.framework */,
@@ -124,8 +131,8 @@
 		CCA9261A18B603C3002A87F7 /* VBValenciaOpenData */ = {
 			isa = PBXGroup;
 			children = (
+				CCA9265918B651DA002A87F7 /* Model */,
 				CCA9264718B605E6002A87F7 /* VODValencia.h */,
-				CCA9264818B605E6002A87F7 /* VODValencia.m */,
 				CCA9261B18B603C3002A87F7 /* Supporting Files */,
 			);
 			path = VBValenciaOpenData;
@@ -146,7 +153,7 @@
 		CCA9262E18B603C3002A87F7 /* VBValenciaOpenDataTests */ = {
 			isa = PBXGroup;
 			children = (
-				CCA9264F18B60607002A87F7 /* VODValenciaTests.m */,
+				CCBE24A418B6826A00F6875D /* Model */,
 				CCA9262F18B603C3002A87F7 /* Supporting Files */,
 			);
 			path = VBValenciaOpenDataTests;
@@ -159,6 +166,23 @@
 				CCA9265218B60607002A87F7 /* VBValenciaOpenDataTests-Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CCA9265918B651DA002A87F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCA9265618B64EEF002A87F7 /* VODConnectionManager.h */,
+				CCA9265718B64EEF002A87F7 /* VODConnectionManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CCBE24A418B6826A00F6875D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCBE24A518B6828800F6875D /* VODConnectionManagerTests.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,7 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCA9264918B605E6002A87F7 /* VODValencia.m in Sources */,
+				CCA9265818B64EEF002A87F7 /* VODConnectionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCA9265318B60607002A87F7 /* VODValenciaTests.m in Sources */,
+				CCBE24A618B6828800F6875D /* VODConnectionManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
