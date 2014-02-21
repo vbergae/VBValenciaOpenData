@@ -75,7 +75,7 @@
 + (instancetype)entityFromResponse:(NSDictionary *)object;
 
 /**
- @name Environtment
+ @name Environment
  */
 
 /**
