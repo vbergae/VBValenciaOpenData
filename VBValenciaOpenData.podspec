@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "VBValenciaOpenData"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "An Objective-c client for the Valencia Datos Abiertos service"
   s.description      = <<-DESC
                        VBValenciaOpenData is a client library written in 
@@ -21,5 +21,5 @@ Pod::Spec.new do |s|
 
   s.public_header_files = 'Classes/VODValencia.h'
   s.frameworks = 'MapKit'
-  s.dependency 'AFNetworking'
+  s.dependency 'AFNetworking' 
 end
