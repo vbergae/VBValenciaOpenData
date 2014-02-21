@@ -8,10 +8,25 @@
 
 #import "VODEntity.h"
 
+/**
+ VODParking
+ 
+ Entity class which represents parking's data.
+ */
 @interface VODParking : VODEntity
 
+/**
+ @name Properties
+ */
+
+/**
+ Parking's name
+ */
 @property NSString *name;
 
+/**
+ Number of available places on parking
+ */
 @property NSUInteger places;
 
 @end

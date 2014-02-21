@@ -15,32 +15,19 @@
 
 + (instancetype)entityFromResponse:(NSDictionary *)object
 {
-//    "latDestino":39471796,
-//    "lonDestino":-368153,
-//    "distancia":2186,
-//    "titulo":"APARCAMIENTOS",
-//    "mensaje":"PORTA DE LA MAR - COLON\nPlazas libres: 94"
+    VODParking *parking = [super entityFromResponse:object];
+    NSAssert([parking isKindOfClass:VODParking.class],
+             @"should create an instance of VODParking not %@",
+             NSStringFromClass(parking.class));
     
-    double latitude = (double)([object[@"latDestino"] integerValue] / 1000000);
-    double longitude = (double)([object[@"lonDestino"] integerValue] / 1000000);
-    NSUInteger distance = [object[@"distancia"] unsignedIntegerValue];
-    NSString *title = object[@"titulo"];
-    NSString *message = object[@"mensaje"];
+    NSString *message       = object[@"mensaje"];
     //
-    NSArray *parkingData = [message componentsSeparatedByString:@"\n"];
-    NSString *name = parkingData[0];
-    NSString *placesText = parkingData[1];
-    NSArray *placesData = [placesText componentsSeparatedByString:@":"];
-    NSUInteger places = [placesData[1] integerValue];
-    CLLocationCoordinate2D coordinates = CLLocationCoordinate2DMake(
-        latitude,
-        longitude
-    );
-    
-    VODParking *parking = VODParking.new;
-    parking.title       = title;
-    parking.coordinates = coordinates;
-    parking.distance    = distance;
+    NSArray *parkingData    = [message componentsSeparatedByString:@"\n"];
+    NSString *name          = parkingData[0];
+    NSString *placesText    = parkingData[1];
+    NSArray *placesData     = [placesText componentsSeparatedByString:@":"];
+    NSUInteger places       = [placesData[1] integerValue];
+ 
     parking.name        = name;
     parking.places      = places;
 

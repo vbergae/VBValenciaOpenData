@@ -1,3 +1,4 @@
+
 //
 //  VODParkingTests.m
 //  VBValenciaOpenData
@@ -45,6 +46,25 @@
     self.parking.places = NSUIntegerMax;
     XCTAssertTrue(self.parking.places == NSUIntegerMax,
                   @"should set NSUIntegerMax places");
+}
+
+#pragma mark -
+#pragma mark Class methods
+
+- (void)test_entityFromResponse
+{
+    NSDictionary *object = @{
+        @"latDestino"   : @(39471796),
+        @"lonDestino"   : @(-36815300),
+        @"distancia"    : @(2186),
+        @"titulo"       : @"APARCAMIENTOS",
+        @"mensaje"      : @"PORTAL DE LA MAR\nPlazas: 87"
+    };
+    
+    VODParking *entity = [VODParking entityFromResponse:object];
+    XCTAssertEqualObjects(entity.name, @"PORTAL DE LA MAR",
+                          @"should set name from options");
+    XCTAssertTrue(entity.places == 87, @"should set places from options");
 }
 
 #pragma mark -
