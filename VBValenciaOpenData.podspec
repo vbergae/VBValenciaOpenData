@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
                        VBValenciaOpenData is a client library written in 
                        objective-c to retrieve data from the "Valencia Datos Abiertos" service.
                        
-                       More info: http://www.valencia.es/ayuntamiento/datosabiertos.nsf/fCategoriaVistaAcc_busqueda?ReadForm&lang=1&nivel=2&seccion=1&Vista=vCategoriasAccTodas&Categoria=Sin_categoria&idapoyo=22ADF97C1FD223B5C1257C55003BD01F
+                       More info: [Valencia Datos abiertos](http://www.valencia.es/ayuntamiento/datosabiertos.nsf/fCategoriaVistaAcc_busqueda?ReadForm&lang=1&nivel=2&seccion=1&Vista=vCategoriasAccTodas&Categoria=Sin_categoria&idapoyo=22ADF97C1FD223B5C1257C55003BD01F)
                        DESC
   s.homepage         = "https://github.com/vbergae/VBValenciaOpenData"
   s.license          = 'MIT'
