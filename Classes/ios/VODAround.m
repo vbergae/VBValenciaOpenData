@@ -16,26 +16,14 @@
 
 + (void)findParkings:(void (^)(NSArray *, NSError *))handler
 {
+    NSParameterAssert(handler);
+    
     [VODConnectionManager.defaultManager
      GET:VODParking.relativePath
      completion:^(id response, NSError *error)
     {
-        NSMutableArray *parkings = nil;
-        
-        if (!error) {
-            NSAssert([response isKindOfClass:NSArray.class],
-                     @"Response object expected as NSArray");
-            parkings = [NSMutableArray arrayWithCapacity:
-                        [(NSArray *)response count]];
-            
-            for (NSDictionary *object in response) {
-                VODParking *parking = [VODParking entityFromResponse:
-                                       object];
-                [parkings addObject:parking];
-            }
-        }
-        
-        handler(parkings, error);
+        NSArray *elements = [VODParking entitiesFromResponse:response];
+        handler(elements, error);
     }];
 }
 
