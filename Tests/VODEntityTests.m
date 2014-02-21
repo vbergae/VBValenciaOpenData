@@ -53,6 +53,29 @@
 #pragma mark -
 #pragma mark Class methods
 
+- (void)test_entitiesFromResponse_with_nil_response
+{
+    XCTAssertThrows([VODEntity entitiesFromResponse:nil],
+                    @"should raise NSInternalInconsistencyException");
+}
+
+- (void)test_entitiesFromResponse
+{
+    NSDictionary *object = @{
+        @"latDestino"   : @(39471796),
+        @"lonDestino"   : @(-36815300),
+        @"distancia"    : @(2186),
+        @"titulo"       : @"APARCAMIENTOS",
+        @"mensaje"      : @"PORTAL DE LA MAR\nPlazas: 87"
+    };
+    
+    NSArray *response = @[object];
+    NSArray *results = [VODEntity entitiesFromResponse:response];
+    
+    XCTAssertTrue(results.count == 1,
+                  @"should create one element");
+}
+
 - (void)test_entityFromResponse_with_nil_object
 {
     XCTAssertThrows([VODEntity entityFromResponse:nil],

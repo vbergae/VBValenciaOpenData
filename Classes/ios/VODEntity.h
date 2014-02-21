@@ -41,6 +41,18 @@
  */
 
 /**
+ Parses the raw response from the service and creates a collection of
+ concrete objects.
+ 
+ @warning Throws NSInternalInconsistencyException if response objects is not
+ an instance is nil.
+ 
+ @param response The response object expected as an array of NSDictionary elements.
+ @return An array of concrete elements.
+ */
++ (NSArray *)entitiesFromResponse:(NSArray *)response;
+
+/**
  Creates a new concrete instance based on the values of object. 
  
  Expected structure from Valencia' open data API is:

@@ -13,6 +13,21 @@
 #pragma mark -
 #pragma mark Class methods
 
++ (NSArray *)entitiesFromResponse:(NSArray *)response
+{
+    NSParameterAssert(response);
+    NSAssert([response isKindOfClass:NSArray.class],
+             @"reponse expected as instance of NSArray");
+    
+    NSMutableArray *elements = [NSMutableArray arrayWithCapacity:response.count];
+    for (NSDictionary *object in response) {
+        id element = [self entityFromResponse:object];
+        [elements addObject:element];
+    }
+    
+    return elements;
+}
+
 + (instancetype)entityFromResponse:(NSDictionary *)object
 {
     NSParameterAssert(object);
