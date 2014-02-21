@@ -18,6 +18,7 @@
 		CCA9265818B64EEF002A87F7 /* VODConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA9265718B64EEF002A87F7 /* VODConnectionManager.m */; };
 		CCA9266018B65807002A87F7 /* VODValencia.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CCA9264718B605E6002A87F7 /* VODValencia.h */; };
 		CCA9266518B66614002A87F7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9266418B66614002A87F7 /* MapKit.framework */; };
+		CCA9266718B74179002A87F7 /* VODEntityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA9266618B74179002A87F7 /* VODEntityTests.m */; };
 		CCBE24A618B6828800F6875D /* VODConnectionManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE24A518B6828800F6875D /* VODConnectionManagerTests.m */; };
 		CCBE24A818B6906500F6875D /* Authorization.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCBE24A718B6906500F6875D /* Authorization.plist */; };
 		CCE3171418B6948200EBA38F /* VODAround.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3170F18B6948200EBA38F /* VODAround.m */; };
@@ -69,6 +70,7 @@
 		CCA9265618B64EEF002A87F7 /* VODConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VODConnectionManager.h; path = Classes/ios/VODConnectionManager.h; sourceTree = SOURCE_ROOT; };
 		CCA9265718B64EEF002A87F7 /* VODConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODConnectionManager.m; path = Classes/ios/VODConnectionManager.m; sourceTree = SOURCE_ROOT; };
 		CCA9266418B66614002A87F7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CCA9266618B74179002A87F7 /* VODEntityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODEntityTests.m; path = Tests/VODEntityTests.m; sourceTree = SOURCE_ROOT; };
 		CCBE24A518B6828800F6875D /* VODConnectionManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODConnectionManagerTests.m; path = Tests/VODConnectionManagerTests.m; sourceTree = SOURCE_ROOT; };
 		CCBE24A718B6906500F6875D /* Authorization.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Authorization.plist; path = Tests/Authorization.plist; sourceTree = SOURCE_ROOT; };
 		CCE3170E18B6948200EBA38F /* VODAround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VODAround.h; path = Classes/ios/VODAround.h; sourceTree = SOURCE_ROOT; };
@@ -202,6 +204,7 @@
 			children = (
 				CCBE24A518B6828800F6875D /* VODConnectionManagerTests.m */,
 				CCE3171718B695AB00EBA38F /* VODParkingTests.m */,
+				CCA9266618B74179002A87F7 /* VODEntityTests.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCA9266718B74179002A87F7 /* VODEntityTests.m in Sources */,
 				CCE3171818B695AB00EBA38F /* VODParkingTests.m in Sources */,
 				CCBE24A618B6828800F6875D /* VODConnectionManagerTests.m in Sources */,
 			);

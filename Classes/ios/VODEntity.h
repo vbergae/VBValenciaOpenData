@@ -14,10 +14,8 @@
  */
 @interface VODEntity : NSObject
 
-@property NSString *title;
 @property CLLocationCoordinate2D coordinates;
 @property NSUInteger distance;
-@property (readonly) NSString *object;
 
 /**
  @name Entity creation
