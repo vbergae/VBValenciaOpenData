@@ -1,31 +1,25 @@
 Pod::Spec.new do |s|
   s.name             = "VBValenciaOpenData"
   s.version          = "0.1.0"
-  s.summary          = "Valencia Open data's objective-c client"
+  s.summary          = "An Objective-c client for the Valencia Datos Abiertos service"
   s.description      = <<-DESC
-                       An optional longer description of VBValenciaOpenData
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                       VBValenciaOpenData is a client library written in 
+                       objective-c to retrieve data from the "Valencia Datos Abiertos" service.
+                       
+                       More info: http://www.valencia.es/ayuntamiento/datosabiertos.nsf/fCategoriaVistaAcc_busqueda?ReadForm&lang=1&nivel=2&seccion=1&Vista=vCategoriasAccTodas&Categoria=Sin_categoria&idapoyo=22ADF97C1FD223B5C1257C55003BD01F
                        DESC
-  s.homepage         = "http://EXAMPLE/NAME"
-  s.screenshots      = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/vbergae/VBValenciaOpenData"
   s.license          = 'MIT'
-  s.author           = { "Víctor Berga" => "victor.berga@glass.u-tad.com" }
-  s.source           = { :git => "http://EXAMPLE/NAME.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/NAME'
+  s.author           = { "Víctor Berga" => "vbergae@gmail.com" }
+  s.source           = { :git => "https://github.com/vbergae/VBValenciaOpenData.git", :tag => s.version.to_s }
 
-  # s.platform     = :ios, '5.0'
-  # s.ios.deployment_target = '5.0'
-  # s.osx.deployment_target = '10.7'
+  s.platform     = :ios, '7.0'
+  s.ios.deployment_target = '7.0'
   s.requires_arc = true
 
-  s.source_files = 'Classes'
-  s.resources = 'Assets'
+  s.source_files = 'Classes/**/*.{h,m}'
 
-  s.ios.exclude_files = 'Classes/osx'
-  s.osx.exclude_files = 'Classes/ios'
-  # s.public_header_files = 'Classes/**/*.h'
-  # s.frameworks = 'SomeFramework', 'AnotherFramework'
-  # s.dependency 'JSONKit', '~> 1.4'
+  s.public_header_files = 'Classes/VODValencia.h'
+  s.frameworks = 'MapKit'
+  s.dependency 'AFNetworking'
 end

@@ -73,6 +73,7 @@
 		CCA9266418B66614002A87F7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CCA9266618B74179002A87F7 /* VODEntityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODEntityTests.m; path = Tests/VODEntityTests.m; sourceTree = SOURCE_ROOT; };
 		CCA9266818B74FA1002A87F7 /* VODAroundTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODAroundTests.m; path = Tests/VODAroundTests.m; sourceTree = SOURCE_ROOT; };
+		CCA9266A18B75935002A87F7 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = SOURCE_ROOT; };
 		CCBE24A518B6828800F6875D /* VODConnectionManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODConnectionManagerTests.m; path = Tests/VODConnectionManagerTests.m; sourceTree = SOURCE_ROOT; };
 		CCBE24A718B6906500F6875D /* Authorization.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Authorization.plist; path = Tests/Authorization.plist; sourceTree = SOURCE_ROOT; };
 		CCE3170E18B6948200EBA38F /* VODAround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VODAround.h; path = Classes/ios/VODAround.h; sourceTree = SOURCE_ROOT; };
@@ -160,6 +161,7 @@
 		CCA9261B18B603C3002A87F7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CCA9266A18B75935002A87F7 /* Rakefile */,
 				CCA9264A18B605F4002A87F7 /* VBValenciaOpenData-Prefix.pch */,
 				CCA9264B18B605F4002A87F7 /* VBValenciaOpenData.podspec */,
 				CCA9264C18B605F4002A87F7 /* LICENSE */,
