@@ -10,6 +10,7 @@
 
 #import "VODConnectionManager.h"
 #import "VODParking.h"
+#import "VODValenbisiParking.h"
 
 
 @implementation VODAround
@@ -23,6 +24,19 @@
      completion:^(id response, NSError *error)
     {
         NSArray *elements = [VODParking entitiesFromResponse:response];
+        handler(elements, error);
+    }];
+}
+
++ (void)findValenbisiParkings:(void (^)(NSArray *, NSError *))handler
+{
+    NSParameterAssert(handler);
+    
+    [VODConnectionManager.defaultManager
+     GET:VODValenbisiParking.relativePath
+     completion:^(id response, NSError *error)
+    {
+        NSArray *elements = [VODValenbisiParking entitiesFromResponse:response];
         handler(elements, error);
     }];
 }

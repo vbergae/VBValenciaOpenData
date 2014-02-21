@@ -12,6 +12,7 @@
 #import "VODAround.h"
 #import "VODConnectionManager.h"
 #import "VODParking.h"
+#import "VODValenbisiParking.h"
 
 @interface VODAroundTests : XCTestCase
 
@@ -37,6 +38,25 @@
     [[manager expect] GET:VODParking.relativePath completion:OCMOCK_ANY];
     
     [VODAround findParkings:^(NSArray *elements, NSError *error) {}];
+    
+    XCTAssertNoThrow([manager verify], @"should use GET:completion:");
+}
+
+#pragma mark findValenbisiParkings:
+
+- (void)test_findValenbisiParkings_with_nil_handler
+{
+    XCTAssertThrows([VODAround findValenbisiParkings:nil],
+                    @"should throw NSInternalInconsistencyException");
+}
+
+- (void)test_findValenbisiParkings
+{
+    id manager = [OCMockObject mockForClass:VODConnectionManager.class];
+    [[[manager stub] andReturn:manager] defaultManager];
+    [[manager expect] GET:VODValenbisiParking.relativePath completion:OCMOCK_ANY];
+    
+    [VODAround findValenbisiParkings:^(NSArray *elements, NSError *error) {}];
     
     XCTAssertNoThrow([manager verify], @"should use GET:completion:");
 }

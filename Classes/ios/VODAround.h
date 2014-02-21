@@ -49,4 +49,12 @@
  */
 + (void)findParkings:(void(^)(NSArray *elements, NSError *error))handler;
 
+/**
+ Request three Valenbisi's stations with available places.
+ 
+ @param handler Completion handler. The 'elements' param will contain instances
+ of VODValenbisiParking (@see VODValenbisiParking).
+ */
++ (void)findValenbisiParkings:(void(^)(NSArray *elements, NSError *error))handler;
+
 @end
