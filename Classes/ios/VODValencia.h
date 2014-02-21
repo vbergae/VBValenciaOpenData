@@ -12,6 +12,7 @@
     #define _VODVALENCIA_
 
     #import "VODAround.h"
+    #import "VODParking.h"
 
 #endif /* _VODVALENCIA_ */
 
