@@ -27,6 +27,6 @@
 /**
  Number of available places on parking
  */
-@property NSUInteger places;
+@property NSUInteger availables;
 
 @end

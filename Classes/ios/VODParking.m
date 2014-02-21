@@ -29,7 +29,7 @@
     NSUInteger places       = [placesData[1] integerValue];
  
     parking.name        = name;
-    parking.places      = places;
+    parking.availables      = places;
 
     return parking;
 }
