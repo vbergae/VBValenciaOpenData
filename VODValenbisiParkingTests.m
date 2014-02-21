@@ -33,42 +33,7 @@
 }
 
 #pragma mark -
-#pragma mark Properties
-
-- (void)test_name
-{
-    self.valenbisi.name = @"name";
-    XCTAssertNotNil(self.valenbisi.name, @"should set a valid string");
-}
-
-- (void)test_places
-{
-    self.valenbisi.places = NSUIntegerMax;
-    XCTAssertTrue(self.valenbisi.places == NSUIntegerMax,
-                  "should set NSUInteger places");
-}
-
-#pragma mark -
 #pragma mark Class methods
-
-#pragma mark entityFromResponse:
-
-- (void)test_entityFromResponse
-{
-    NSDictionary *object = @{
-        @"latDestino"   : @(39471796),
-        @"lonDestino"   : @(-36815300),
-        @"distancia"    : @(2186),
-        @"titulo"       : @"APARCAMIENTOS",
-        @"mensaje"      : @"Autopista del Saler - Antonio Ferrandis (C.C. El Saler)\nPlazas libres: 3"
-    };
-    
-    VODValenbisiParking *entity = [VODValenbisiParking entityFromResponse:object];
-    XCTAssertEqualObjects(entity.name,
-                          @"Autopista del Saler - Antonio Ferrandis (C.C. El Saler)",
-                          @"should set name from options");
-    XCTAssertTrue(entity.places == 3, @"should set places from options");
-}
 
 #pragma mark relativePath
 

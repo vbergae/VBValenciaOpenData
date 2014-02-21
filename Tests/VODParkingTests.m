@@ -43,8 +43,8 @@
 
 - (void)test_places
 {
-    self.parking.places = NSUIntegerMax;
-    XCTAssertTrue(self.parking.places == NSUIntegerMax,
+    self.parking.availables = NSUIntegerMax;
+    XCTAssertTrue(self.parking.availables == NSUIntegerMax,
                   @"should set NSUIntegerMax places");
 }
 
@@ -64,7 +64,7 @@
     VODParking *entity = [VODParking entityFromResponse:object];
     XCTAssertEqualObjects(entity.name, @"PORTAL DE LA MAR",
                           @"should set name from options");
-    XCTAssertTrue(entity.places == 87, @"should set places from options");
+    XCTAssertTrue(entity.availables == 87, @"should set places from options");
 }
 
 #pragma mark -
