@@ -2,6 +2,8 @@
 
 ## 0.2.0
 
+Requests Taxi stops
+
 Requests Valenbisi's available bikes
 
 Requests Valenbisi's stations with available parking data near user's 
