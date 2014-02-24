@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4EC8A221FED144B581AB48E9 /* libPods-VBValenciaOpenData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D36470F112E144B28118BFDC /* libPods-VBValenciaOpenData.a */; };
 		91A3C6B5DBC3484995E8E098 /* libPods-VBValenciaOpenDataTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C0FBCF363984FB7AA0B2B53 /* libPods-VBValenciaOpenDataTests.a */; };
+		CC4D853A18BB6E9300588412 /* VODTaxi.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4D853918BB6E9300588412 /* VODTaxi.m */; };
+		CC4D853C18BB6F0D00588412 /* VODTaxiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4D853B18BB6F0D00588412 /* VODTaxiTests.m */; };
 		CCA9261918B603C3002A87F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9261818B603C3002A87F7 /* Foundation.framework */; };
 		CCA9262718B603C3002A87F7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9262618B603C3002A87F7 /* XCTest.framework */; };
 		CCA9262818B603C3002A87F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9261818B603C3002A87F7 /* Foundation.framework */; };
@@ -59,6 +61,9 @@
 		47D6AA546B2F4A639A7D9457 /* Pods-VBValenciaOpenDataTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBValenciaOpenDataTests.xcconfig"; path = "Pods/Pods-VBValenciaOpenDataTests.xcconfig"; sourceTree = "<group>"; };
 		7C0FBCF363984FB7AA0B2B53 /* libPods-VBValenciaOpenDataTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBValenciaOpenDataTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEB0C64B4E64327BF5960EA /* Pods-VBValenciaOpenData.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VBValenciaOpenData.xcconfig"; path = "Pods/Pods-VBValenciaOpenData.xcconfig"; sourceTree = "<group>"; };
+		CC4D853818BB6E9300588412 /* VODTaxi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VODTaxi.h; path = Classes/ios/VODTaxi.h; sourceTree = SOURCE_ROOT; };
+		CC4D853918BB6E9300588412 /* VODTaxi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODTaxi.m; path = Classes/ios/VODTaxi.m; sourceTree = SOURCE_ROOT; };
+		CC4D853B18BB6F0D00588412 /* VODTaxiTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODTaxiTests.m; path = Tests/VODTaxiTests.m; sourceTree = SOURCE_ROOT; };
 		CCA9261518B603C3002A87F7 /* libVBValenciaOpenData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVBValenciaOpenData.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA9261818B603C3002A87F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CCA9262518B603C3002A87F7 /* VBValenciaOpenDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VBValenciaOpenDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +219,8 @@
 				CCA9266C18B77370002A87F7 /* VODValenbisiParking.m */,
 				CCA9267018B77DD9002A87F7 /* VODValenbisiBike.h */,
 				CCA9267118B77DD9002A87F7 /* VODValenbisiBike.m */,
+				CC4D853818BB6E9300588412 /* VODTaxi.h */,
+				CC4D853918BB6E9300588412 /* VODTaxi.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -226,6 +233,7 @@
 				CCA9266618B74179002A87F7 /* VODEntityTests.m */,
 				CCA9266E18B7738E002A87F7 /* VODValenbisiParkingTests.m */,
 				CCE5528818B7F2D200808D69 /* VODValenbisiBikeTests.m */,
+				CC4D853B18BB6F0D00588412 /* VODTaxiTests.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -391,6 +399,7 @@
 				CCA9267218B77DD9002A87F7 /* VODValenbisiBike.m in Sources */,
 				CCE3171618B6948200EBA38F /* VODParking.m in Sources */,
 				CCE3171418B6948200EBA38F /* VODAround.m in Sources */,
+				CC4D853A18BB6E9300588412 /* VODTaxi.m in Sources */,
 				CCE3171518B6948200EBA38F /* VODEntity.m in Sources */,
 				CCA9265818B64EEF002A87F7 /* VODConnectionManager.m in Sources */,
 				CCA9266D18B77370002A87F7 /* VODValenbisiParking.m in Sources */,
@@ -407,6 +416,7 @@
 				CCE3171818B695AB00EBA38F /* VODParkingTests.m in Sources */,
 				CCA9266F18B7738E002A87F7 /* VODValenbisiParkingTests.m in Sources */,
 				CCBE24A618B6828800F6875D /* VODConnectionManagerTests.m in Sources */,
+				CC4D853C18BB6F0D00588412 /* VODTaxiTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
