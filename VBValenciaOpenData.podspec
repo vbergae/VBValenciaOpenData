@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "VBValenciaOpenData"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.summary          = "An Objective-c client for the Valencia Datos Abiertos service"
   s.description      = <<-DESC
                        VBValenciaOpenData is a client library written in 
