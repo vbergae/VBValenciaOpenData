@@ -2,6 +2,8 @@
 
 ## 0.2.0
 
+Requests WiFi hotspots
+
 Requests Taxi stops
 
 Requests Valenbisi's available bikes

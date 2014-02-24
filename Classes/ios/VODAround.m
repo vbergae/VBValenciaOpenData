@@ -13,6 +13,7 @@
 #import "VODValenbisiParking.h"
 #import "VODValenbisiBike.h"
 #import "VODTaxi.h"
+#import "VODWifi.h"
 
 @implementation VODAround
 
@@ -62,6 +63,18 @@
      GET:VODTaxi.relativePath
      completion:^(id response, NSError *error) {
          NSArray *elements = [VODTaxi entitiesFromResponse:response];
+         handler(elements, error);
+     }];
+}
+
++ (void)findWifis:(void (^)(NSArray *, NSError *))handler
+{
+    NSParameterAssert(handler);
+    
+    [VODConnectionManager.defaultManager
+     GET:VODWifi.relativePath
+     completion:^(id response, NSError *error) {
+         NSArray *elements = [VODWifi entitiesFromResponse:response];
          handler(elements, error);
      }];
 }

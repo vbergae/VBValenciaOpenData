@@ -11,9 +11,34 @@
 
 @interface VODTaxiTests : XCTestCase
 
+@property VODTaxi *taxi;
+
 @end
 
 @implementation VODTaxiTests
+
+- (void)setUp
+{
+    [super setUp];
+    
+    self.taxi = VODTaxi.new;
+}
+
+- (void)tearDown
+{
+    self.taxi = nil;
+    
+    [super tearDown];
+}
+
+#pragma mark -
+#pragma mark Properties
+
+- (void)test_address
+{
+    self.taxi.address = @"FAKE ADDRESS";
+    XCTAssertNotNil(self.taxi.address, @"should set an address");
+}
 
 #pragma mark -
 #pragma mark Class methods

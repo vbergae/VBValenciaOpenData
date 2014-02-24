@@ -73,4 +73,13 @@
  */
 + (void)findTaxis:(void(^)(NSArray *elements, NSError *error))handler;
 
+
+/**
+ Requests WiFi hotspots.
+ 
+ @param handler Completion handler. The 'elements' param will contain instances
+ of VODWifi (@see VODWifi).
+ */
++ (void)findWifis:(void(^)(NSArray *elements, NSError *error))handler;
+
 @end
