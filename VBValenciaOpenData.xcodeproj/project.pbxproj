@@ -29,7 +29,7 @@
 		CCE3171518B6948200EBA38F /* VODEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3171118B6948200EBA38F /* VODEntity.m */; };
 		CCE3171618B6948200EBA38F /* VODParking.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3171318B6948200EBA38F /* VODParking.m */; };
 		CCE3171818B695AB00EBA38F /* VODParkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3171718B695AB00EBA38F /* VODParkingTests.m */; };
-		CCE5528918B7F2D200808D69 /* VODValenbisiBike.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE5528818B7F2D200808D69 /* VODValenbisiBike.m */; };
+		CCE5528918B7F2D200808D69 /* VODValenbisiBikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE5528818B7F2D200808D69 /* VODValenbisiBikeTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +92,7 @@
 		CCE3171218B6948200EBA38F /* VODParking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VODParking.h; path = Classes/ios/VODParking.h; sourceTree = SOURCE_ROOT; };
 		CCE3171318B6948200EBA38F /* VODParking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODParking.m; path = Classes/ios/VODParking.m; sourceTree = SOURCE_ROOT; };
 		CCE3171718B695AB00EBA38F /* VODParkingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODParkingTests.m; path = Tests/VODParkingTests.m; sourceTree = SOURCE_ROOT; };
-		CCE5528818B7F2D200808D69 /* VODValenbisiBike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODValenbisiBike.m; path = Tests/VODValenbisiBike.m; sourceTree = SOURCE_ROOT; };
+		CCE5528818B7F2D200808D69 /* VODValenbisiBikeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODValenbisiBikeTests.m; path = Tests/VODValenbisiBikeTests.m; sourceTree = SOURCE_ROOT; };
 		D36470F112E144B28118BFDC /* libPods-VBValenciaOpenData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VBValenciaOpenData.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -225,7 +225,7 @@
 				CCE3171718B695AB00EBA38F /* VODParkingTests.m */,
 				CCA9266618B74179002A87F7 /* VODEntityTests.m */,
 				CCA9266E18B7738E002A87F7 /* VODValenbisiParkingTests.m */,
-				CCE5528818B7F2D200808D69 /* VODValenbisiBike.m */,
+				CCE5528818B7F2D200808D69 /* VODValenbisiBikeTests.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -401,7 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCE5528918B7F2D200808D69 /* VODValenbisiBike.m in Sources */,
+				CCE5528918B7F2D200808D69 /* VODValenbisiBikeTests.m in Sources */,
 				CCA9266918B74FA1002A87F7 /* VODAroundTests.m in Sources */,
 				CCA9266718B74179002A87F7 /* VODEntityTests.m in Sources */,
 				CCE3171818B695AB00EBA38F /* VODParkingTests.m in Sources */,
