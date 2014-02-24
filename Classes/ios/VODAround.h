@@ -57,4 +57,20 @@
  */
 + (void)findValenbisiParkings:(void(^)(NSArray *elements, NSError *error))handler;
 
+/**
+ Requests the number of available bikes on the three most near stations.
+ 
+ @param handler Completion handler. The 'elements' param will contain instances
+ of VODValenbisiBike (@see VODValenbisiBike).
+ */
++ (void)findValenbisiBikes:(void(^)(NSArray *elements, NSError *error))handler;
+
+/**
+ Requests the most near taxi stops.
+ 
+ @param handler Completion handler. The 'elements' param will contain instances
+ of VODValenbisiBike (@see VODValenbisiBike).
+ */
++ (void)findTaxis:(void(^)(NSArray *elements, NSError *error))handler;
+
 @end

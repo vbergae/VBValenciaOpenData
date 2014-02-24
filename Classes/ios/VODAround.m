@@ -11,7 +11,8 @@
 #import "VODConnectionManager.h"
 #import "VODParking.h"
 #import "VODValenbisiParking.h"
-
+#import "VODValenbisiBike.h"
+#import "VODTaxi.h"
 
 @implementation VODAround
 
@@ -39,6 +40,30 @@
         NSArray *elements = [VODValenbisiParking entitiesFromResponse:response];
         handler(elements, error);
     }];
+}
+
++ (void)findValenbisiBikes:(void (^)(NSArray *, NSError *))handler
+{
+    NSParameterAssert(handler);
+    
+    [VODConnectionManager.defaultManager
+     GET:VODValenbisiBike.relativePath
+     completion:^(id response, NSError *error) {
+         NSArray *elements = [VODValenbisiBike entitiesFromResponse:response];
+         handler(elements, error);
+     }];
+}
+
++ (void)findTaxis:(void (^)(NSArray *, NSError *))handler
+{
+    NSParameterAssert(handler);
+    
+    [VODConnectionManager.defaultManager
+     GET:VODTaxi.relativePath
+     completion:^(id response, NSError *error) {
+         NSArray *elements = [VODTaxi entitiesFromResponse:response];
+         handler(elements, error);
+     }];
 }
 
 @end
