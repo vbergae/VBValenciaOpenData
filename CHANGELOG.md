@@ -2,6 +2,8 @@
 
 ## 0.2.0
 
+Requests traffic information
+
 Requests WiFi hotspots
 
 Requests Taxi stops
