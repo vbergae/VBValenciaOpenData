@@ -17,22 +17,35 @@ three results. Get more information from this [PDF](http://www.valencia.es/ayunt
 
     [VODAround findParkings:^(NSArray *elements, NSError *error) {}];
 
+*Note: if exists, the 'elements' array will contain instances of **VODParking**.*
+
 ### Request information about near Valenbisi stations
 
     [VODAround findValenbisiParkings:^(NSArray *elements, NSError *error)) {}];
+
+*Note: if exists, the 'elements' array will contain instances of **VODValenbisiParking**.*    
+    
     [VODAround findValenbisiBikes:^(NSArray *elements, NSError *error)) {}];
+    
+*Note: if exists, the 'elements' array will contain instances of **VODValenbisiBike**.*    
 
 ### Request information about near Taxi stops
 
     [VODAround findTaxis:^(NSArray *elements, NSError *error)) {}];
+    
+*Note: if exists, the 'elements' array will contain instances of **VODTaxi**.*    
 
 ### Request information about near Wifi points
 
     [VODAround findWifis:^(NSArray *elements, NSError *error)) {}];
     
+*Note: if exists, the 'elements' array will contain instances of **VODPWifi**.*    
+    
 ### Request information about the traffic
 
     [VODAround findTrafficMessages:^(NSArray *elements, NSError *error)) {}];
+    
+*Note: if exists, the 'elements' array will contain instances of **VODTraffic**.*    
 
 ## Installation
 
