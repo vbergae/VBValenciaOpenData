@@ -34,8 +34,6 @@ three results. Get more information from this [PDF](http://www.valencia.es/ayunt
 
     [VODAround findTrafficMessages:^(NSArray *elements, NSError *error)) {}];
 
-## Requirements
-
 ## Installation
 
 VBValenciaOpenData is available through [CocoaPods](http://cocoapods.org), to install
