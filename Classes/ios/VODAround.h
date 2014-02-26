@@ -82,4 +82,13 @@
  */
 + (void)findWifis:(void(^)(NSArray *elements, NSError *error))handler;
 
+/**
+ Requests traffic information based on the user's position
+ 
+ @param handler Completion handler. The 'elements' param will contain instances
+ of VODTraffic (@see VODTraffic).
+ */
++ (void)findTrafficMessages:(void(^)(NSArray *elements,
+                                     NSError *error))handler;
+
 @end

@@ -16,6 +16,7 @@
 #import "VODValenbisiBike.h"
 #import "VODTaxi.h"
 #import "VODWifi.h"
+#import "VODTraffic.h"
 
 @interface VODAroundTests : XCTestCase
 
@@ -93,6 +94,17 @@
     [[manager expect] GET:VODWifi.relativePath completion:OCMOCK_ANY];
     
     [VODAround findWifis:^(NSArray *elements, NSError *error) {}];
+    
+    XCTAssertNoThrow([manager verify], @"should use GET:completion:");
+}
+
+- (void)test_findTrafficMessages
+{
+    id manager = [OCMockObject mockForClass:VODConnectionManager.class];
+    [[[manager stub] andReturn:manager] defaultManager];
+    [[manager expect] GET:VODTraffic.relativePath completion:OCMOCK_ANY];
+    
+    [VODAround findTrafficMessages:^(NSArray *elements, NSError *error) {}];
     
     XCTAssertNoThrow([manager verify], @"should use GET:completion:");
 }
