@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                        DESC
   s.homepage         = "https://github.com/vbergae/VBValenciaOpenData"
   s.license          = 'MIT'
-  s.author           = { "Víctor Berga" => "vbergae@gmail.com" }
+  s.author           = { "Víctor Berga" => "vbergae@gmail.com" }
   s.source           = { :git => "https://github.com/vbergae/VBValenciaOpenData.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '7.0'
@@ -22,4 +22,10 @@ Pod::Spec.new do |s|
   s.public_header_files = 'Classes/VODValencia.h'
   s.frameworks = 'MapKit'
   s.dependency 'AFNetworking' 
+  
+  s.documentation = { :appledoc => [
+    '--product-name', s.name,
+    '--project-version', s.version,
+    '--project-company', 'VictorBerga.com',
+    '--company-id', 'com.victorbera']}
 end
