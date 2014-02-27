@@ -13,6 +13,7 @@
 		CC19A0F918BE717500F30BAB /* VODTrafficTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC19A0F818BE717500F30BAB /* VODTrafficTests.m */; };
 		CC37AE5618BF614B0001AF95 /* VODValenbisiParkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37AE5518BF614B0001AF95 /* VODValenbisiParkingTests.m */; };
 		CC37AE5918BF884B0001AF95 /* VODContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37AE5818BF884B0001AF95 /* VODContainer.m */; };
+		CC37AE5B18BF965A0001AF95 /* VODContainerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37AE5A18BF965A0001AF95 /* VODContainerTests.m */; };
 		CC4D853A18BB6E9300588412 /* VODTaxi.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4D853918BB6E9300588412 /* VODTaxi.m */; };
 		CC4D853C18BB6F0D00588412 /* VODTaxiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4D853B18BB6F0D00588412 /* VODTaxiTests.m */; };
 		CC4D853F18BB739500588412 /* VODWifi.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4D853E18BB739500588412 /* VODWifi.m */; };
@@ -72,6 +73,7 @@
 		CC37AE5518BF614B0001AF95 /* VODValenbisiParkingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODValenbisiParkingTests.m; path = Tests/VODValenbisiParkingTests.m; sourceTree = SOURCE_ROOT; };
 		CC37AE5718BF884B0001AF95 /* VODContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VODContainer.h; path = Classes/ios/VODContainer.h; sourceTree = SOURCE_ROOT; };
 		CC37AE5818BF884B0001AF95 /* VODContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODContainer.m; path = Classes/ios/VODContainer.m; sourceTree = SOURCE_ROOT; };
+		CC37AE5A18BF965A0001AF95 /* VODContainerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODContainerTests.m; path = Tests/VODContainerTests.m; sourceTree = SOURCE_ROOT; };
 		CC4D853818BB6E9300588412 /* VODTaxi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VODTaxi.h; path = Classes/ios/VODTaxi.h; sourceTree = SOURCE_ROOT; };
 		CC4D853918BB6E9300588412 /* VODTaxi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODTaxi.m; path = Classes/ios/VODTaxi.m; sourceTree = SOURCE_ROOT; };
 		CC4D853B18BB6F0D00588412 /* VODTaxiTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODTaxiTests.m; path = Tests/VODTaxiTests.m; sourceTree = SOURCE_ROOT; };
@@ -255,6 +257,7 @@
 				CCE5528818B7F2D200808D69 /* VODValenbisiBikeTests.m */,
 				CC4D853B18BB6F0D00588412 /* VODTaxiTests.m */,
 				CC19A0F818BE717500F30BAB /* VODTrafficTests.m */,
+				CC37AE5A18BF965A0001AF95 /* VODContainerTests.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC37AE5618BF614B0001AF95 /* VODValenbisiParkingTests.m in Sources */,
+				CC37AE5B18BF965A0001AF95 /* VODContainerTests.m in Sources */,
 				CCE5528918B7F2D200808D69 /* VODValenbisiBikeTests.m in Sources */,
 				CCA9266918B74FA1002A87F7 /* VODAroundTests.m in Sources */,
 				CCA9266718B74179002A87F7 /* VODEntityTests.m in Sources */,
