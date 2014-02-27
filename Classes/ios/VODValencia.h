@@ -16,6 +16,8 @@
     #import "VODValenbisiParking.h"
     #import "VODValenbisiBike.h"
     #import "VODTaxi.h"
+    #import "VODWifi.h"
+    #import "VODTraffic.h"
 
 #endif /* _VODVALENCIA_ */
 
