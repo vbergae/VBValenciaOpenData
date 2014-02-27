@@ -68,4 +68,12 @@ VODContainerType VODContainerTypeFromNSString(NSString *typeName)
 
 @implementation VODContainer
 
+#pragma mark -
+#pragma mark Class methods
+
++ (NSString *)relativePath
+{
+    return @"contenedores/{tipo}/{lat}/{lon}";
+}
+
 @end

@@ -93,4 +93,15 @@
                   @"should set some type");
 }
 
+#pragma mark -
+#pragma mark Class methods
+
+- (void)test_relativePath
+{
+    NSString *expected = @"contenedores/{tipo}/{lat}/{lon}";
+    NSString *result = VODContainer.relativePath;
+    
+    XCTAssertEqualObjects(expected, result, @"should return his path");
+}
+
 @end
