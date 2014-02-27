@@ -27,5 +27,5 @@ Pod::Spec.new do |s|
     '--product-name', s.name,
     '--project-version', s.version,
     '--project-company', 'VictorBerga.com',
-    '--company-id', 'com.victorbera']}
+    '--company-id', 'com.victorberga']}
 end
