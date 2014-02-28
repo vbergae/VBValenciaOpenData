@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VODContainer.h"
 
 /**
  VODAround
@@ -45,7 +46,7 @@
  Requests three parkings near the user with available places.
  
  @param handler Completion handler. The 'elements' param will contain instances
- of VODParking (@see VODParking).
+ of VODParking.
  */
 + (void)findParkings:(void(^)(NSArray *elements, NSError *error))handler;
 
@@ -53,7 +54,7 @@
  Request three Valenbisi's stations with available places.
  
  @param handler Completion handler. The 'elements' param will contain instances
- of VODValenbisiParking (@see VODValenbisiParking).
+ of VODValenbisiParking.
  */
 + (void)findValenbisiParkings:(void(^)(NSArray *elements, NSError *error))handler;
 
@@ -61,7 +62,7 @@
  Requests the number of available bikes on the three most near stations.
  
  @param handler Completion handler. The 'elements' param will contain instances
- of VODValenbisiBike (@see VODValenbisiBike).
+ of VODValenbisiBike.
  */
 + (void)findValenbisiBikes:(void(^)(NSArray *elements, NSError *error))handler;
 
@@ -69,16 +70,25 @@
  Requests the most near taxi stops.
  
  @param handler Completion handler. The 'elements' param will contain instances
- of VODValenbisiBike (@see VODValenbisiBike).
+ of VODValenbisiBike.
  */
 + (void)findTaxis:(void(^)(NSArray *elements, NSError *error))handler;
 
 
 /**
+ Requests the most near containers by type.
+ 
+ @param handler Completion handler. The 'elements' param will contain instances
+ of VODContainer.
+ */
++ (void)findContainernsByType:(VODContainerType)type
+                   completion:(void(^)(NSArray *elements, NSError *error))handler;
+
+/**
  Requests WiFi hotspots.
  
  @param handler Completion handler. The 'elements' param will contain instances
- of VODWifi (@see VODWifi).
+ of VODWifi.
  */
 + (void)findWifis:(void(^)(NSArray *elements, NSError *error))handler;
 
@@ -86,7 +96,7 @@
  Requests traffic information based on the user's position
  
  @param handler Completion handler. The 'elements' param will contain instances
- of VODTraffic (@see VODTraffic).
+ of VODTraffic.
  */
 + (void)findTrafficMessages:(void(^)(NSArray *elements,
                                      NSError *error))handler;

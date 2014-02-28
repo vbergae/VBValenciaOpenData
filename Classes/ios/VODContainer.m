@@ -71,6 +71,25 @@ VODContainerType VODContainerTypeFromNSString(NSString *typeName)
 #pragma mark -
 #pragma mark Class methods
 
++ (instancetype)entityFromResponse:(NSDictionary *)object
+{
+    VODContainer *entity = [super entityFromResponse:object];
+    NSAssert([entity isKindOfClass:VODContainer.class],
+             @"Entity not expected as %@",
+             NSStringFromClass(entity.class));
+
+    // Extracts type from the title
+    static NSString * const Title = @"CONTENEDORES DE ";
+    NSString *title = object[@"titulo"];
+    NSString *typeString = [title substringFromIndex:Title.length];
+    VODContainerType type = VODContainerTypeFromNSString(typeString.lowercaseString);
+    
+    entity.address  = object[@"mensaje"];
+    entity.type     = type;
+    
+    return entity;
+}
+
 + (NSString *)relativePath
 {
     return @"contenedores/{tipo}/{lat}/{lon}";

@@ -87,6 +87,20 @@
     XCTAssertNoThrow([manager verify], @"should use GET:completion:");
 }
 
+- (void)test_findContainersByType_completion
+{
+    NSString *path = @"contenedores/pilas/{lat}/{lon}";
+    
+    id manager = [OCMockObject mockForClass:VODConnectionManager.class];
+    [[[manager stub] andReturn:manager] defaultManager];
+    [[manager expect] GET:path completion:OCMOCK_ANY];
+    
+    [VODAround findContainernsByType:VODBatteryContainer
+                          completion:^(NSArray *elements, NSError *error) {}];
+    
+    XCTAssertNoThrow([manager verify], @"should use GET:completion:");
+}
+
 - (void)test_findWifis
 {
     id manager = [OCMockObject mockForClass:VODConnectionManager.class];

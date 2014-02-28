@@ -96,6 +96,22 @@
 #pragma mark -
 #pragma mark Class methods
 
+- (void)test_entityFromResponse
+{
+    NSDictionary *object = @{
+        @"latDestino": @39461416,
+        @"lonDestino": @-345131,
+        @"distancia": @1277,
+        @"titulo": @"CONTENEDORES DE ACEITE",
+        @"mensaje": @"C. Trafalgar, 34\nCMPM-TRAFALGAR 02-CM_PERSONAS MAYORES"
+    };
+    
+    VODContainer *entity = [VODContainer entityFromResponse:object];
+    XCTAssertEqualObjects(entity.address,
+        @"C. Trafalgar, 34\nCMPM-TRAFALGAR 02-CM_PERSONAS MAYORES");
+    XCTAssertTrue(entity.type == VODOilContainer, @"should set type from options");
+}
+
 - (void)test_relativePath
 {
     NSString *expected = @"contenedores/{tipo}/{lat}/{lon}";

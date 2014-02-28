@@ -18,6 +18,7 @@
     #import "VODTaxi.h"
     #import "VODWifi.h"
     #import "VODTraffic.h"
+    #import "VODContainer.h"
 
 #endif /* _VODVALENCIA_ */
 

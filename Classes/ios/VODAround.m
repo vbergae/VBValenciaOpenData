@@ -68,6 +68,24 @@
      }];
 }
 
++ (void)findContainernsByType:(VODContainerType)type
+                   completion:(void (^)(NSArray *, NSError *))handler
+{
+    NSParameterAssert(handler);
+    
+    NSString *typeString = NSStringFromVODContainerType(type);
+    NSString *path = [VODContainer.relativePath
+        stringByReplacingOccurrencesOfString:@"{tipo}"
+        withString:typeString];
+    
+    [VODConnectionManager.defaultManager
+     GET:path
+     completion:^(id response, NSError *error) {
+        NSArray *elements = [VODContainer entitiesFromResponse:response];
+        handler(elements, error);
+    }];
+}
+
 + (void)findWifis:(void (^)(NSArray *, NSError *))handler
 {
     NSParameterAssert(handler);
