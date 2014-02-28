@@ -1,8 +1,14 @@
 # VBValenciaOpenData CHANGELOG
 
-## 0.2.0
+## 0.4.0
 
-Requests traffic information
+Requests container's information
+
+## 0.3.0
+
+Requests traffic's information
+
+## 0.2.0
 
 Requests WiFi hotspots
 
