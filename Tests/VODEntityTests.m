@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
 
 #import "VODEntity.h"
 
@@ -52,6 +53,28 @@
 
 #pragma mark -
 #pragma mark Class methods
+
+#pragma mark findAllByCoordinates:completion:
+
+- (void)test_findAllByCoordinates_completion
+{
+    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(0.234, 32.834);
+    
+    id manager = [OCMockObject mockForClass:VODConnectionManager.class];
+    [[[manager stub] andReturn:manager] defaultManager];
+    [[manager expect]
+     GET:OCMOCK_ANY
+     coordinates:coord
+     completion:OCMOCK_ANY];
+    
+    [VODEntity findAllByCoordinates:coord
+                         completion:^(NSArray *elements,
+                                      NSError *error) {}];
+    
+    XCTAssertNoThrow([manager verify], @"should call GET:coordinate:handler");
+}
+
+#pragma mark - entitiesFromResponse:
 
 - (void)test_entitiesFromResponse_with_nil_response
 {

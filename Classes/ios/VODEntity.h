@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
+#import "VODConnectionManager.h"
+
 /**
  VODEntity
  
@@ -35,6 +37,20 @@
  Distance between the user and the receiver (in meters)
  */
 @property NSUInteger distance;
+
+/**
+ @name Making requests
+ */
+
+/**
+ Finds elements near the given coordinates
+ 
+ @param coordinates Coordinates used as reference
+ @param handler Completion handler
+ */
++ (void)findAllByCoordinates:(CLLocationCoordinate2D)coordinates
+                  completion:(void(^)(NSArray *elements,
+                                      NSError *error))handler;
 
 /**
  @name Entity creation

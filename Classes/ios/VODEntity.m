@@ -13,6 +13,19 @@
 #pragma mark -
 #pragma mark Class methods
 
++ (void)findAllByCoordinates:(CLLocationCoordinate2D)coordinates
+                  completion:(void (^)(NSArray *, NSError *))handler
+{
+    [[VODConnectionManager defaultManager]
+     GET:self.relativePath
+     coordinates:coordinates
+     completion:^(id response, NSError *error)
+     {
+         NSArray *elements = [self entitiesFromResponse:response];
+         handler(elements, error);
+     }];
+}
+
 + (NSArray *)entitiesFromResponse:(NSArray *)response
 {
     NSParameterAssert(response);
