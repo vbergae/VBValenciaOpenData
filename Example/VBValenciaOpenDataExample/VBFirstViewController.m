@@ -9,32 +9,72 @@
 #import <VBValenciaOpenData/VODValencia.h>
 #import "VBFirstViewController.h"
 
-@interface VBFirstViewController ()
+@interface VBFirstViewController ()<UITableViewDataSource, UITableViewDelegate>
+
+@property (readonly) NSArray *segues;
 
 @end
 
 @implementation VBFirstViewController
 
-- (void)viewDidLoad
+- (NSArray *)titles
 {
-    [super viewDidLoad];
-    
-    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(39.468932,
-                                                              -0.374823);
-    [VODParking findAllByCoordinates:coord
-                          completion:^(NSArray *elements, NSError *error)
-    {
-        NSLog(@"elements: %@", elements);
-        NSLog(@"Error: %@", error);
-    }];
-    
-	// Do any additional setup after loading the view, typically from a nib.
+    return @[
+        @"Parking",
+        @"Valenbisi - Bikes",
+        @"Valenbisi - Parking",
+        @"Taxi",
+        @"Containers",
+        @"WiFi Points",
+        @"Traffic"
+    ];
 }
 
-- (void)didReceiveMemoryWarning
+- (NSArray *)segues
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return @[@"VBParkingSegue"];
+}
+
+#pragma mark -
+#pragma mark UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
+{
+    return self.titles.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString * const Identifier = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
+                             Identifier];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc]
+                initWithStyle:UITableViewCellStyleDefault
+                reuseIdentifier:Identifier];
+        cell.textLabel.text = self.titles[indexPath.row];
+    }
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.row < self.segues.count) {
+        NSString *segueName = self.segues[indexPath.row];
+        [self performSegueWithIdentifier:segueName sender:nil];
+    }
 }
 
 @end

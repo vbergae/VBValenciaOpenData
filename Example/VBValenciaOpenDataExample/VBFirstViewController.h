@@ -10,4 +10,6 @@
 
 @interface VBFirstViewController : UIViewController
 
+@property (readonly) NSArray *titles;
+
 @end

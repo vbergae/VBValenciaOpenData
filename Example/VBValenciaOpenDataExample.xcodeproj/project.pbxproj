@@ -24,6 +24,7 @@
 		CC956B8618C383B100A5049E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC956B8418C383B100A5049E /* InfoPlist.strings */; };
 		CC956B8818C383B100A5049E /* VBValenciaOpenDataExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC956B8718C383B100A5049E /* VBValenciaOpenDataExampleTests.m */; };
 		CC956B9218C386DB00A5049E /* Authorization.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC956B9118C386DB00A5049E /* Authorization.plist */; };
+		CC956B9518C38EDA00A5049E /* VBFindAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC956B9418C38EDA00A5049E /* VBFindAllViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		CC956B8518C383B100A5049E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CC956B8718C383B100A5049E /* VBValenciaOpenDataExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBValenciaOpenDataExampleTests.m; sourceTree = "<group>"; };
 		CC956B9118C386DB00A5049E /* Authorization.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Authorization.plist; sourceTree = "<group>"; };
+		CC956B9318C38EDA00A5049E /* VBFindAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFindAllViewController.h; sourceTree = "<group>"; };
+		CC956B9418C38EDA00A5049E /* VBFindAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFindAllViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				CC956B7218C383B100A5049E /* VBSecondViewController.m */,
 				CC956B7418C383B100A5049E /* Images.xcassets */,
 				CC956B6018C383B100A5049E /* Supporting Files */,
+				CC956B9318C38EDA00A5049E /* VBFindAllViewController.h */,
+				CC956B9418C38EDA00A5049E /* VBFindAllViewController.m */,
 			);
 			path = VBValenciaOpenDataExample;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC956B6A18C383B100A5049E /* VBAppDelegate.m in Sources */,
+				CC956B9518C38EDA00A5049E /* VBFindAllViewController.m in Sources */,
 				CC956B7018C383B100A5049E /* VBFirstViewController.m in Sources */,
 				CC956B7318C383B100A5049E /* VBSecondViewController.m in Sources */,
 				CC956B6618C383B100A5049E /* main.m in Sources */,
