@@ -60,9 +60,10 @@
         cell = [[UITableViewCell alloc]
                 initWithStyle:UITableViewCellStyleDefault
                 reuseIdentifier:Identifier];
-        cell.textLabel.text = self.titles[indexPath.row];
     }
     
+    cell.textLabel.text = self.titles[indexPath.row];
+
     return cell;
 }
 
