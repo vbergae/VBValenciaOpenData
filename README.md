@@ -8,8 +8,6 @@
 
 ## How to find information near the user.
 
-All methods to request this information lives inside the interface VODAround.h.
-
 Based on the documentation provided by Valencia's city hall all services returns
 three results. Get more information from this [PDF](http://www.valencia.es/ayuntamiento/DatosAbiertos.nsf/0/2113BD9D1693D7EAC1257C6600449981/$FILE/API%20APPCIUDAD%20v3.pdf?OpenElement&lang=1) (in spanish).
 
@@ -83,7 +81,7 @@ it simply add the following line to your Podfile:
 
 ## Author
 
-Víctor Berga, vbergae@gmail.com
+Víctor Berga, vbergae@gmail.com
 
 ## License
 
