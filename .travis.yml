@@ -1,4 +1,5 @@
 language: objective-c
+rvm: 1.9.3
 before_script:
   - gem install cocoapods -v 0.29.0 --no-ri --no-doc
   - pod install
