@@ -8,15 +8,36 @@
 
 #import "VODConnectionManager.h"
 
-static NSString * const kVODBaseURLString = @"http://mapas.valencia.es/lanzadera";
-NSString * const kVODUsernameKey = @"username";
-NSString * const kVODPasswordKey = @"password";
+NSString * const kVODBaseURLString  = @"http://mapas.valencia.es/lanzadera";
+NSString * const kVODUsernameKey    = @"username";
+NSString * const kVODPasswordKey    = @"password";
 
-NSDictionary * LoadOptions()
+NSString * NSStringFromCoordinateComponent(double value)
+{
+    BOOL negative = value < 0 ? YES : NO;
+    unsigned char const PostiveLength   = 8;
+    unsigned char const NegativeLength  = 9;
+    
+    NSNumber *lat = @((double)(value * 1000000.));
+    NSString *retVal = lat.stringValue;
+    
+    unsigned char padLen = retVal.length;
+    if (negative && retVal.length < NegativeLength)
+        padLen = NegativeLength;
+    else if (!negative && retVal.length < PostiveLength)
+        padLen = PostiveLength;
+    
+    retVal = [retVal stringByPaddingToLength:padLen
+                                  withString:@"0"
+                             startingAtIndex:0];
+    
+    return retVal;
+}
+
+static NSDictionary * LoadOptions()
 {
     NSString *authorizationFilePath = nil;
-    for (NSBundle *bundle in NSBundle.allBundles)
-    {
+    for (NSBundle *bundle in NSBundle.allBundles) {
         authorizationFilePath = [bundle pathForResource:@"Authorization"
                                                  ofType:@"plist"];
         
@@ -26,59 +47,21 @@ NSDictionary * LoadOptions()
     return [NSDictionary dictionaryWithContentsOfFile:authorizationFilePath];
 }
 
-@interface VODConnectionManager() {
-@private
-    CLLocationManager *_locationManager;
-}
-@property (readonly) CLLocationManager *locationManager;
-@property (readwrite) CLLocation *userLocation;
-@property BOOL userLocationAvailable;
-@property (readonly) NSString *latitudeString;
-@property (readonly) NSString *longitudeString;
+@interface VODConnectionManager()
 
 @end
 
 @implementation VODConnectionManager
 
 #pragma mark -
-#pragma mark Properties
-
-- (CLLocationManager *)locationManager
-{
-    if (!_locationManager) {
-        _locationManager = CLLocationManager.new;
-        _locationManager.delegate = self;
-    }
-    
-    return _locationManager;
-}
-
-- (NSString *)latitudeString
-{
-    NSNumber *lat = @((NSInteger)(self.userLocation.coordinate.latitude
-                                   * 1000000));
-    
-    return lat.stringValue;
-}
-
-
-- (NSString *)longitudeString
-{
-    NSNumber *lon   = @((NSInteger)(self.userLocation.coordinate.longitude
-                                    * 1000000));
-    
-    return lon.stringValue;
-}
-
-#pragma mark -
 #pragma mark Initialization
 
-- (id)initWithOptions:(NSDictionary *)options
+- (id)initWithBaseURL:(NSURL *)url options:(NSDictionary *)options
 {
+    NSParameterAssert(url);
     NSParameterAssert(options);
     
-    NSURL *baseURL = [NSURL URLWithString:kVODBaseURLString];
-    self = [super initWithBaseURL:baseURL];
+    self = [super initWithBaseURL:url];
     if (self) {
         self.requestSerializer = AFJSONRequestSerializer.serializer;
         
@@ -90,26 +73,39 @@ NSDictionary * LoadOptions()
         [self.requestSerializer
          setAuthorizationHeaderFieldWithUsername:username
          password:password];
-        
-        [self.locationManager startUpdatingLocation];
     }
     
     return self;
 }
 
+- (id)initWithOptions:(NSDictionary *)options
+{
+    NSURL *baseURL = [NSURL URLWithString:kVODBaseURLString];
+    return [self initWithBaseURL:baseURL options:options];
+}
+
 #pragma mark -
 #pragma mark Instance methods
+
+- (void)GET:(NSString *)URLFormat
+coordinates:(CLLocationCoordinate2D)coordinate
+ completion:(void (^)(id, NSError *))handler
+{
+    NSString *lat = NSStringFromCoordinateComponent(coordinate.latitude);
+    NSString *lon = NSStringFromCoordinateComponent(coordinate.longitude);
+    
+    NSString *URLString = [[URLFormat
+        stringByReplacingOccurrencesOfString:@"{lat}" withString:lat]
+        stringByReplacingOccurrencesOfString:@"{lon}" withString:lon];
+    
+    [self GET:URLString completion:handler];
+}
 
 - (void)GET:(NSString *)URLString
  completion:(void (^)(id, NSError *))handler
 {
     NSParameterAssert(URLString);
     NSParameterAssert(handler);
-    
-    URLString = [URLString stringByReplacingOccurrencesOfString:@"{lon}"
-                           withString:self.longitudeString];
-    URLString = [URLString stringByReplacingOccurrencesOfString:@"{lat}"
-                           withString:self.latitudeString];
 
     [self GET:URLString
    parameters:nil
@@ -123,20 +119,6 @@ NSDictionary * LoadOptions()
     }];
 }
 
-#pragma mark - CLLocationManagerDelegate
-
-- (void)locationManager:(CLLocationManager *)manager
-     didUpdateLocations:(NSArray *)locations
-{
-    self.userLocation = locations[locations.count - 1];
-    if (self.userLocation)
-        self.userLocationAvailable = YES;
-    else
-        self.userLocationAvailable = NO;
-    
-    [manager stopUpdatingLocation];
-}
-
 #pragma mark -
 #pragma mark Class methods
 
@@ -145,9 +127,11 @@ NSDictionary * LoadOptions()
     static dispatch_once_t onceToken;
     static VODConnectionManager *defaultManager;
     dispatch_once(&onceToken, ^{
+        NSURL *URL = [NSURL URLWithString:kVODBaseURLString];
         NSDictionary *options   = LoadOptions();
         defaultManager          = [[VODConnectionManager alloc]
-                                   initWithOptions:options];
+                                   initWithBaseURL:URL
+                                   options:options];
     });
     
     return defaultManager;

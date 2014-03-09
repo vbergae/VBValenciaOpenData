@@ -7,6 +7,8 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
+
 #import "VODContainer.h"
 
 @interface VODContainerTests : XCTestCase
@@ -95,6 +97,26 @@
 
 #pragma mark -
 #pragma mark Class methods
+
+#pragma mark findAllByType:coordinates:completion:
+
+- (void)test_findAllByType_coorindate_completion
+{
+    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(0.234, 32.834);
+    
+    id manager = [OCMockObject mockForClass:VODConnectionManager.class];
+    [[[manager stub] andReturn:manager] defaultManager];
+    [[manager expect]
+     GET:OCMOCK_ANY
+     coordinates:coord
+     completion:OCMOCK_ANY];
+    
+    [VODContainer findAllByType:VODOilContainer
+                    coordinates:coord
+                     completion:^(NSArray *elements, NSError *error) {}];
+    
+    XCTAssertNoThrow([manager verify], @"should call GET:coordinate:handler");
+}
 
 - (void)test_entityFromResponse
 {

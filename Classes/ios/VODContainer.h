@@ -64,4 +64,19 @@ VODContainerType VODContainerTypeFromNSString(NSString *typeName);
  */
 @property VODContainerType type;
 
+/**
+ @name Make Requests
+ */
+
+/**
+ Finds elements near the given coordinates filtered by VODContainerType
+ 
+ @param type One of VODContainerType values
+ @param coordinates Coordinates used as reference
+ @param handler Completion handler
+ */
++ (void)findAllByType:(VODContainerType)type
+          coordinates:(CLLocationCoordinate2D)coordinates
+           completion:(void(^)(NSArray *elements, NSError *error))handler;
+
 @end

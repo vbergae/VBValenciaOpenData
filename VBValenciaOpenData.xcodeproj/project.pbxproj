@@ -28,12 +28,10 @@
 		CCA9266018B65807002A87F7 /* VODValencia.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CCA9264718B605E6002A87F7 /* VODValencia.h */; };
 		CCA9266518B66614002A87F7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA9266418B66614002A87F7 /* MapKit.framework */; };
 		CCA9266718B74179002A87F7 /* VODEntityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA9266618B74179002A87F7 /* VODEntityTests.m */; };
-		CCA9266918B74FA1002A87F7 /* VODAroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA9266818B74FA1002A87F7 /* VODAroundTests.m */; };
 		CCA9266D18B77370002A87F7 /* VODValenbisiParking.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA9266C18B77370002A87F7 /* VODValenbisiParking.m */; };
 		CCA9267218B77DD9002A87F7 /* VODValenbisiBike.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA9267118B77DD9002A87F7 /* VODValenbisiBike.m */; };
 		CCBE24A618B6828800F6875D /* VODConnectionManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBE24A518B6828800F6875D /* VODConnectionManagerTests.m */; };
 		CCBE24A818B6906500F6875D /* Authorization.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCBE24A718B6906500F6875D /* Authorization.plist */; };
-		CCE3171418B6948200EBA38F /* VODAround.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3170F18B6948200EBA38F /* VODAround.m */; };
 		CCE3171518B6948200EBA38F /* VODEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3171118B6948200EBA38F /* VODEntity.m */; };
 		CCE3171618B6948200EBA38F /* VODParking.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3171318B6948200EBA38F /* VODParking.m */; };
 		CCE3171818B695AB00EBA38F /* VODParkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3171718B695AB00EBA38F /* VODParkingTests.m */; };
@@ -97,7 +95,6 @@
 		CCA9265718B64EEF002A87F7 /* VODConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODConnectionManager.m; path = Classes/ios/VODConnectionManager.m; sourceTree = SOURCE_ROOT; };
 		CCA9266418B66614002A87F7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CCA9266618B74179002A87F7 /* VODEntityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODEntityTests.m; path = Tests/VODEntityTests.m; sourceTree = SOURCE_ROOT; };
-		CCA9266818B74FA1002A87F7 /* VODAroundTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODAroundTests.m; path = Tests/VODAroundTests.m; sourceTree = SOURCE_ROOT; };
 		CCA9266A18B75935002A87F7 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = SOURCE_ROOT; };
 		CCA9266B18B77370002A87F7 /* VODValenbisiParking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VODValenbisiParking.h; path = Classes/ios/VODValenbisiParking.h; sourceTree = SOURCE_ROOT; };
 		CCA9266C18B77370002A87F7 /* VODValenbisiParking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODValenbisiParking.m; path = Classes/ios/VODValenbisiParking.m; sourceTree = SOURCE_ROOT; };
@@ -105,8 +102,6 @@
 		CCA9267118B77DD9002A87F7 /* VODValenbisiBike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODValenbisiBike.m; path = Classes/ios/VODValenbisiBike.m; sourceTree = SOURCE_ROOT; };
 		CCBE24A518B6828800F6875D /* VODConnectionManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODConnectionManagerTests.m; path = Tests/VODConnectionManagerTests.m; sourceTree = SOURCE_ROOT; };
 		CCBE24A718B6906500F6875D /* Authorization.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Authorization.plist; path = Tests/Authorization.plist; sourceTree = SOURCE_ROOT; };
-		CCE3170E18B6948200EBA38F /* VODAround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VODAround.h; path = Classes/ios/VODAround.h; sourceTree = SOURCE_ROOT; };
-		CCE3170F18B6948200EBA38F /* VODAround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODAround.m; path = Classes/ios/VODAround.m; sourceTree = SOURCE_ROOT; };
 		CCE3171018B6948200EBA38F /* VODEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VODEntity.h; path = Classes/ios/VODEntity.h; sourceTree = SOURCE_ROOT; };
 		CCE3171118B6948200EBA38F /* VODEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VODEntity.m; path = Classes/ios/VODEntity.m; sourceTree = SOURCE_ROOT; };
 		CCE3171218B6948200EBA38F /* VODParking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VODParking.h; path = Classes/ios/VODParking.h; sourceTree = SOURCE_ROOT; };
@@ -181,8 +176,6 @@
 			children = (
 				CCA9264718B605E6002A87F7 /* VODValencia.h */,
 				CCA9265918B651DA002A87F7 /* Model */,
-				CCE3170E18B6948200EBA38F /* VODAround.h */,
-				CCE3170F18B6948200EBA38F /* VODAround.m */,
 				CCA9261B18B603C3002A87F7 /* Supporting Files */,
 			);
 			path = VBValenciaOpenData;
@@ -207,7 +200,6 @@
 				CCBE24A918B691D200F6875D /* Fixture */,
 				CCBE24A418B6826A00F6875D /* Model */,
 				CCA9262F18B603C3002A87F7 /* Supporting Files */,
-				CCA9266818B74FA1002A87F7 /* VODAroundTests.m */,
 			);
 			path = VBValenciaOpenDataTests;
 			sourceTree = "<group>";
@@ -423,7 +415,6 @@
 				CC19A0F718BE714700F30BAB /* VODTraffic.m in Sources */,
 				CCA9267218B77DD9002A87F7 /* VODValenbisiBike.m in Sources */,
 				CCE3171618B6948200EBA38F /* VODParking.m in Sources */,
-				CCE3171418B6948200EBA38F /* VODAround.m in Sources */,
 				CC4D853A18BB6E9300588412 /* VODTaxi.m in Sources */,
 				CC37AE5918BF884B0001AF95 /* VODContainer.m in Sources */,
 				CC4D853F18BB739500588412 /* VODWifi.m in Sources */,
@@ -440,7 +431,6 @@
 				CC37AE5618BF614B0001AF95 /* VODValenbisiParkingTests.m in Sources */,
 				CC37AE5B18BF965A0001AF95 /* VODContainerTests.m in Sources */,
 				CCE5528918B7F2D200808D69 /* VODValenbisiBikeTests.m in Sources */,
-				CCA9266918B74FA1002A87F7 /* VODAroundTests.m in Sources */,
 				CCA9266718B74179002A87F7 /* VODEntityTests.m in Sources */,
 				CCE3171818B695AB00EBA38F /* VODParkingTests.m in Sources */,
 				CC4D854118BB73AF00588412 /* VODWifiTests.m in Sources */,

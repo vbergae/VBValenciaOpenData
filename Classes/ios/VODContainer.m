@@ -71,6 +71,24 @@ VODContainerType VODContainerTypeFromNSString(NSString *typeName)
 #pragma mark -
 #pragma mark Class methods
 
++ (void)findAllByType:(VODContainerType)type
+          coordinates:(CLLocationCoordinate2D)coordinates
+           completion:(void (^)(NSArray *, NSError *))handler
+{
+    NSString *typeString    = NSStringFromVODContainerType(type);
+    NSString *path          = [VODContainer.relativePath
+                               stringByReplacingOccurrencesOfString:@"{tipo}"
+                               withString:typeString];
+    
+    [VODConnectionManager.defaultManager
+     GET:path
+     coordinates:coordinates
+     completion:^(id response, NSError *error) {
+         NSArray *elements = [self entitiesFromResponse:response];
+         handler(elements, error);
+     }];
+}
+
 + (instancetype)entityFromResponse:(NSDictionary *)object
 {
     VODContainer *entity = [super entityFromResponse:object];
