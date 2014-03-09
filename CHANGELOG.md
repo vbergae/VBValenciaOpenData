@@ -1,5 +1,11 @@
 # VBValenciaOpenData CHANGELOG
 
+## 1.0.0
+
+Request Wifi points information
+Request traffic status information
+Request trash containers information
+
 ## 0.4.0
 
 Requests container's information
