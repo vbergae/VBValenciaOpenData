@@ -1,6 +1,6 @@
 language: objective-c
 before_script:
-  - gem install cocoapods --no-rdoc --no-ri --no-document --quiet  
+  - gem install cocoapods -v 0.29.0 --no-ri --no-doc
   - pod install
 script:
   - xctool ONLY_ACTIVE_ARCH=NO
