@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC30A98920234D05A3D50617 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 019BF3AEBC5046D1B64BE18B /* libPods.a */; };
+		CC956B5A18C383B100A5049E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC956B5918C383B100A5049E /* Foundation.framework */; };
+		CC956B5C18C383B100A5049E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC956B5B18C383B100A5049E /* CoreGraphics.framework */; };
+		CC956B5E18C383B100A5049E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC956B5D18C383B100A5049E /* UIKit.framework */; };
+		CC956B6418C383B100A5049E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC956B6218C383B100A5049E /* InfoPlist.strings */; };
+		CC956B6618C383B100A5049E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC956B6518C383B100A5049E /* main.m */; };
+		CC956B6A18C383B100A5049E /* VBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC956B6918C383B100A5049E /* VBAppDelegate.m */; };
+		CC956B6D18C383B100A5049E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC956B6B18C383B100A5049E /* Main.storyboard */; };
+		CC956B7018C383B100A5049E /* VBFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC956B6F18C383B100A5049E /* VBFirstViewController.m */; };
+		CC956B7318C383B100A5049E /* VBSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC956B7218C383B100A5049E /* VBSecondViewController.m */; };
+		CC956B7518C383B100A5049E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC956B7418C383B100A5049E /* Images.xcassets */; };
+		CC956B7C18C383B100A5049E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC956B7B18C383B100A5049E /* XCTest.framework */; };
+		CC956B7D18C383B100A5049E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC956B5918C383B100A5049E /* Foundation.framework */; };
+		CC956B7E18C383B100A5049E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC956B5D18C383B100A5049E /* UIKit.framework */; };
+		CC956B8618C383B100A5049E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC956B8418C383B100A5049E /* InfoPlist.strings */; };
+		CC956B8818C383B100A5049E /* VBValenciaOpenDataExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC956B8718C383B100A5049E /* VBValenciaOpenDataExampleTests.m */; };
+		CC956B9218C386DB00A5049E /* Authorization.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC956B9118C386DB00A5049E /* Authorization.plist */; };
+		CC956B9518C38EDA00A5049E /* VBFindAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC956B9418C38EDA00A5049E /* VBFindAllViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC956B7F18C383B100A5049E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC956B4E18C383B100A5049E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC956B5518C383B100A5049E;
+			remoteInfo = VBValenciaOpenDataExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		019BF3AEBC5046D1B64BE18B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E42E55D36D406EA6C226FC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		CC956B5618C383B100A5049E /* VBValenciaOpenDataExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VBValenciaOpenDataExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC956B5918C383B100A5049E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CC956B5B18C383B100A5049E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CC956B5D18C383B100A5049E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CC956B6118C383B100A5049E /* VBValenciaOpenDataExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VBValenciaOpenDataExample-Info.plist"; sourceTree = "<group>"; };
+		CC956B6318C383B100A5049E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CC956B6518C383B100A5049E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC956B6718C383B100A5049E /* VBValenciaOpenDataExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VBValenciaOpenDataExample-Prefix.pch"; sourceTree = "<group>"; };
+		CC956B6818C383B100A5049E /* VBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBAppDelegate.h; sourceTree = "<group>"; };
+		CC956B6918C383B100A5049E /* VBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBAppDelegate.m; sourceTree = "<group>"; };
+		CC956B6C18C383B100A5049E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC956B6E18C383B100A5049E /* VBFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBFirstViewController.h; sourceTree = "<group>"; };
+		CC956B6F18C383B100A5049E /* VBFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBFirstViewController.m; sourceTree = "<group>"; };
+		CC956B7118C383B100A5049E /* VBSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBSecondViewController.h; sourceTree = "<group>"; };
+		CC956B7218C383B100A5049E /* VBSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBSecondViewController.m; sourceTree = "<group>"; };
+		CC956B7418C383B100A5049E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CC956B7A18C383B100A5049E /* VBValenciaOpenDataExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VBValenciaOpenDataExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC956B7B18C383B100A5049E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CC956B8318C383B100A5049E /* VBValenciaOpenDataExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VBValenciaOpenDataExampleTests-Info.plist"; sourceTree = "<group>"; };
+		CC956B8518C383B100A5049E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CC956B8718C383B100A5049E /* VBValenciaOpenDataExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBValenciaOpenDataExampleTests.m; sourceTree = "<group>"; };
+		CC956B9118C386DB00A5049E /* Authorization.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Authorization.plist; sourceTree = "<group>"; };
+		CC956B9318C38EDA00A5049E /* VBFindAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFindAllViewController.h; sourceTree = "<group>"; };
+		CC956B9418C38EDA00A5049E /* VBFindAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFindAllViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC956B5318C383B100A5049E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC956B5C18C383B100A5049E /* CoreGraphics.framework in Frameworks */,
+				CC956B5E18C383B100A5049E /* UIKit.framework in Frameworks */,
+				CC956B5A18C383B100A5049E /* Foundation.framework in Frameworks */,
+				AC30A98920234D05A3D50617 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC956B7718C383B100A5049E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC956B7C18C383B100A5049E /* XCTest.framework in Frameworks */,
+				CC956B7E18C383B100A5049E /* UIKit.framework in Frameworks */,
+				CC956B7D18C383B100A5049E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC956B4D18C383B100A5049E = {
+			isa = PBXGroup;
+			children = (
+				CC956B5F18C383B100A5049E /* VBValenciaOpenDataExample */,
+				CC956B8118C383B100A5049E /* VBValenciaOpenDataExampleTests */,
+				CC956B5818C383B100A5049E /* Frameworks */,
+				CC956B5718C383B100A5049E /* Products */,
+				92E42E55D36D406EA6C226FC /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		CC956B5718C383B100A5049E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC956B5618C383B100A5049E /* VBValenciaOpenDataExample.app */,
+				CC956B7A18C383B100A5049E /* VBValenciaOpenDataExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC956B5818C383B100A5049E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC956B5918C383B100A5049E /* Foundation.framework */,
+				CC956B5B18C383B100A5049E /* CoreGraphics.framework */,
+				CC956B5D18C383B100A5049E /* UIKit.framework */,
+				CC956B7B18C383B100A5049E /* XCTest.framework */,
+				019BF3AEBC5046D1B64BE18B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC956B5F18C383B100A5049E /* VBValenciaOpenDataExample */ = {
+			isa = PBXGroup;
+			children = (
+				CC956B6818C383B100A5049E /* VBAppDelegate.h */,
+				CC956B6918C383B100A5049E /* VBAppDelegate.m */,
+				CC956B6B18C383B100A5049E /* Main.storyboard */,
+				CC956B6E18C383B100A5049E /* VBFirstViewController.h */,
+				CC956B6F18C383B100A5049E /* VBFirstViewController.m */,
+				CC956B7118C383B100A5049E /* VBSecondViewController.h */,
+				CC956B7218C383B100A5049E /* VBSecondViewController.m */,
+				CC956B7418C383B100A5049E /* Images.xcassets */,
+				CC956B6018C383B100A5049E /* Supporting Files */,
+				CC956B9318C38EDA00A5049E /* VBFindAllViewController.h */,
+				CC956B9418C38EDA00A5049E /* VBFindAllViewController.m */,
+			);
+			path = VBValenciaOpenDataExample;
+			sourceTree = "<group>";
+		};
+		CC956B6018C383B100A5049E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC956B6118C383B100A5049E /* VBValenciaOpenDataExample-Info.plist */,
+				CC956B6218C383B100A5049E /* InfoPlist.strings */,
+				CC956B6518C383B100A5049E /* main.m */,
+				CC956B6718C383B100A5049E /* VBValenciaOpenDataExample-Prefix.pch */,
+				CC956B9118C386DB00A5049E /* Authorization.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC956B8118C383B100A5049E /* VBValenciaOpenDataExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC956B8718C383B100A5049E /* VBValenciaOpenDataExampleTests.m */,
+				CC956B8218C383B100A5049E /* Supporting Files */,
+			);
+			path = VBValenciaOpenDataExampleTests;
+			sourceTree = "<group>";
+		};
+		CC956B8218C383B100A5049E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC956B8318C383B100A5049E /* VBValenciaOpenDataExampleTests-Info.plist */,
+				CC956B8418C383B100A5049E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC956B5518C383B100A5049E /* VBValenciaOpenDataExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC956B8B18C383B100A5049E /* Build configuration list for PBXNativeTarget "VBValenciaOpenDataExample" */;
+			buildPhases = (
+				FF64DBE2253141809B28C803 /* Check Pods Manifest.lock */,
+				CC956B5218C383B100A5049E /* Sources */,
+				CC956B5318C383B100A5049E /* Frameworks */,
+				CC956B5418C383B100A5049E /* Resources */,
+				C4495B26D86541B5B341B750 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VBValenciaOpenDataExample;
+			productName = VBValenciaOpenDataExample;
+			productReference = CC956B5618C383B100A5049E /* VBValenciaOpenDataExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC956B7918C383B100A5049E /* VBValenciaOpenDataExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC956B8E18C383B100A5049E /* Build configuration list for PBXNativeTarget "VBValenciaOpenDataExampleTests" */;
+			buildPhases = (
+				CC956B7618C383B100A5049E /* Sources */,
+				CC956B7718C383B100A5049E /* Frameworks */,
+				CC956B7818C383B100A5049E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC956B8018C383B100A5049E /* PBXTargetDependency */,
+			);
+			name = VBValenciaOpenDataExampleTests;
+			productName = VBValenciaOpenDataExampleTests;
+			productReference = CC956B7A18C383B100A5049E /* VBValenciaOpenDataExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC956B4E18C383B100A5049E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VB;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = VictorBerga.com;
+				TargetAttributes = {
+					CC956B7918C383B100A5049E = {
+						TestTargetID = CC956B5518C383B100A5049E;
+					};
+				};
+			};
+			buildConfigurationList = CC956B5118C383B100A5049E /* Build configuration list for PBXProject "VBValenciaOpenDataExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC956B4D18C383B100A5049E;
+			productRefGroup = CC956B5718C383B100A5049E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC956B5518C383B100A5049E /* VBValenciaOpenDataExample */,
+				CC956B7918C383B100A5049E /* VBValenciaOpenDataExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC956B5418C383B100A5049E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC956B7518C383B100A5049E /* Images.xcassets in Resources */,
+				CC956B6418C383B100A5049E /* InfoPlist.strings in Resources */,
+				CC956B9218C386DB00A5049E /* Authorization.plist in Resources */,
+				CC956B6D18C383B100A5049E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC956B7818C383B100A5049E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC956B8618C383B100A5049E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C4495B26D86541B5B341B750 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF64DBE2253141809B28C803 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC956B5218C383B100A5049E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC956B6A18C383B100A5049E /* VBAppDelegate.m in Sources */,
+				CC956B9518C38EDA00A5049E /* VBFindAllViewController.m in Sources */,
+				CC956B7018C383B100A5049E /* VBFirstViewController.m in Sources */,
+				CC956B7318C383B100A5049E /* VBSecondViewController.m in Sources */,
+				CC956B6618C383B100A5049E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC956B7618C383B100A5049E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC956B8818C383B100A5049E /* VBValenciaOpenDataExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC956B8018C383B100A5049E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC956B5518C383B100A5049E /* VBValenciaOpenDataExample */;
+			targetProxy = CC956B7F18C383B100A5049E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC956B6218C383B100A5049E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC956B6318C383B100A5049E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CC956B6B18C383B100A5049E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC956B6C18C383B100A5049E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CC956B8418C383B100A5049E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC956B8518C383B100A5049E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC956B8918C383B100A5049E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CC956B8A18C383B100A5049E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC956B8C18C383B100A5049E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92E42E55D36D406EA6C226FC /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VBValenciaOpenDataExample/VBValenciaOpenDataExample-Prefix.pch";
+				INFOPLIST_FILE = "VBValenciaOpenDataExample/VBValenciaOpenDataExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CC956B8D18C383B100A5049E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92E42E55D36D406EA6C226FC /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VBValenciaOpenDataExample/VBValenciaOpenDataExample-Prefix.pch";
+				INFOPLIST_FILE = "VBValenciaOpenDataExample/VBValenciaOpenDataExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CC956B8F18C383B100A5049E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VBValenciaOpenDataExample.app/VBValenciaOpenDataExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VBValenciaOpenDataExample/VBValenciaOpenDataExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VBValenciaOpenDataExampleTests/VBValenciaOpenDataExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CC956B9018C383B100A5049E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VBValenciaOpenDataExample.app/VBValenciaOpenDataExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VBValenciaOpenDataExample/VBValenciaOpenDataExample-Prefix.pch";
+				INFOPLIST_FILE = "VBValenciaOpenDataExampleTests/VBValenciaOpenDataExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC956B5118C383B100A5049E /* Build configuration list for PBXProject "VBValenciaOpenDataExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC956B8918C383B100A5049E /* Debug */,
+				CC956B8A18C383B100A5049E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC956B8B18C383B100A5049E /* Build configuration list for PBXNativeTarget "VBValenciaOpenDataExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC956B8C18C383B100A5049E /* Debug */,
+				CC956B8D18C383B100A5049E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC956B8E18C383B100A5049E /* Build configuration list for PBXNativeTarget "VBValenciaOpenDataExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC956B8F18C383B100A5049E /* Debug */,
+				CC956B9018C383B100A5049E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC956B4E18C383B100A5049E /* Project object */;
+}
