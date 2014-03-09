@@ -17,39 +17,62 @@ Import main header file:
 
     #import <VODValenciaOpenData/VODValencia.h>
 
-### Request information about near parkings
+### Request information based on user location
 
-    [VODAround findParkings:^(NSArray *elements, NSError *error) {}];
+#### Parkings
 
-*Note: if exists, the 'elements' array will contain instances of **VODParking**.*
-
-### Request information about near Valenbisi stations
-
-    [VODAround findValenbisiParkings:^(NSArray *elements, NSError *error)) {}];
-
-*Note: if exists, the 'elements' array will contain instances of **VODValenbisiParking**.*    
+	[VODParking findAllByCoordinates:coordinates   // User location
+                  completion:^(NSArray *elements,  // Completion handler
+                               NSError *error)) {
+    	/** Handle results or error */                           
+    }];
     
-    [VODAround findValenbisiBikes:^(NSArray *elements, NSError *error)) {}];
-    
-*Note: if exists, the 'elements' array will contain instances of **VODValenbisiBike**.*    
+#### Taxi stops
 
-### Request information about near Taxi stops
-
-    [VODAround findTaxis:^(NSArray *elements, NSError *error)) {}];
+	[VODTaxi findAllByCoordinates:coordinates   // User location
+                       completion:^(NSArray *elements,  // Completion handler
+                                    NSError *error)) {
+    	/** Handle results or error */                           
+    }];
     
-*Note: if exists, the 'elements' array will contain instances of **VODTaxi**.*    
+#### Valenbisi's parkings and bikes
 
-### Request information about near Wifi points
+	[VODValenbisiParking findAllByCoordinates:coordinates   // User location
+                                   completion:^(NSArray *elements,  // Completion handler
+                                                NSError *error)) {
+    	/** Handle results or error */                           
+    }];	
+    
+	[VODValenbisiBike findAllByCoordinates:coordinates   // User location
+                                completion:^(NSArray *elements,  // Completion handler
+                                             NSError *error)) {
+    	/** Handle results or error */                           
+    }];	    
 
-    [VODAround findWifis:^(NSArray *elements, NSError *error)) {}];
-    
-*Note: if exists, the 'elements' array will contain instances of **VODPWifi**.*    
-    
-### Request information about the traffic
+#### Wifi points
 
-    [VODAround findTrafficMessages:^(NSArray *elements, NSError *error)) {}];
+	[VODWifi findAllByCoordinates:coordinates   // User location
+                       completion:^(NSArray *elements,  // Completion handler
+                                    NSError *error)) {
+    	/** Handle results or error */                           
+    }];	
+
+#### Traffic status
+
+	[VODTraffic findAllByCoordinates:coordinates   // User location
+                          completion:^(NSArray *elements,  // Completion handler
+                                       NSError *error)) {
+    	/** Handle results or error */                           
+    }];	
     
-*Note: if exists, the 'elements' array will contain instances of **VODTraffic**.*    
+#### Trash Containers
+
+	[VODContainer findAllByType:VODOilContainer // Container's tyoe
+                    coordinates:coordinates 	// User location
+                      ompletion:^(NSArray *elements,  // Completion handler
+                                  NSError *error)) {
+    	/** Handle results or error */                           
+    }];	
 
 ## Installation
 
