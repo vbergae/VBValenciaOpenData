@@ -4,6 +4,15 @@
 [![Version](http://cocoapod-badges.herokuapp.com/v/VBValenciaOpenData/badge.png)](http://cocoadocs.org/docsets/VBValenciaOpenData)
 [![Platform](http://cocoapod-badges.herokuapp.com/p/VBValenciaOpenData/badge.png)](http://cocoadocs.org/docsets/VBValenciaOpenData)
 
+## Requirements
+
+### Configure your 'Authorization.plist' file
+
+1. Get an scaffolded version from [here](https://github.com/vbergae/VBValenciaOpenData/blob/master/Example/VBValenciaOpenDataExample/Authorization.plist.distribution).
+2. Fill with your username/password (request permissions using this [form](http://www.valencia.es/ayuntamiento/DatosAbiertos.nsf/web_fApi?ReadForm&lang=1&nivel=3&seccion=1)).
+3. Rename it from Authorization.plist.distribution to Authorization.plist
+4. Add Authorization.plist to your app's main bundle.
+
 ## Usage
 
 ## How to find information near the user.
