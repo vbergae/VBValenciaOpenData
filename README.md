@@ -65,7 +65,7 @@ Import main header file:
     
 #### Trash Containers
 
-	[VODContainer findAllByType:VODOilContainer // Container's tyoe
+	[VODContainer findAllByType:VODOilContainer // Container's type
                     coordinates:coordinates 	// User location
                       ompletion:^(NSArray *elements,  // Completion handler
                                   NSError *error)) {
